@@ -1,13 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import ThreeDModel from '../../components/Collada/ThreeDModel';
+import Header from '../../components/Header/Header';
 
 function Home() {
   return (
     <>
-    <div>Welcome to tharang 24</div>
-    <Link to='/events'>Go to events</Link>
-    <ThreeDModel/>
+    <Header/>
     </>
   )
 }

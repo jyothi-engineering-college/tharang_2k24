@@ -10,6 +10,9 @@ const ThreeDModel = () => {
     let camera, scene, renderer, mixer;
     const clock = new THREE.Clock();
 
+    // Fixed aspect ratio (e.g., 16:9)
+    const aspectRatio = 16 / 9;
+
     const cleanUpScene = () => {
       if (scene) {
         while (scene.children.length > 0) {
@@ -39,7 +42,7 @@ const ThreeDModel = () => {
       cleanUpScene();
 
       // Camera setup
-      camera = new THREE.PerspectiveCamera(25, window.innerWidth / window.innerHeight, 1, 1000);
+      camera = new THREE.PerspectiveCamera(25, aspectRatio, 1, 1000); // Use fixed aspect ratio
       camera.position.set(15, 10, -15);
 
       // Scene setup
@@ -70,16 +73,16 @@ const ThreeDModel = () => {
       scene.add(directionalLight);
 
       // Renderer setup
-      renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true }); // Set alpha to true for transparency
+      renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
       renderer.setPixelRatio(window.devicePixelRatio);
-      renderer.setSize(window.innerWidth, window.innerHeight);
+      
+      // Set renderer size to match container size
+      renderer.setSize(container.clientWidth, container.clientHeight);
       renderer.setAnimationLoop(animate);
       container.appendChild(renderer.domElement);
 
       // Controls setup
       const controls = new OrbitControls(camera, renderer.domElement);
-      // console.log(controls);
-      
       controls.screenSpacePanning = true;
       controls.minDistance = 5;
       controls.maxDistance = 40;
@@ -91,9 +94,10 @@ const ThreeDModel = () => {
     };
 
     const onWindowResize = () => {
-      camera.aspect = window.innerWidth / window.innerHeight;
-      camera.updateProjectionMatrix();
-      renderer.setSize(window.innerWidth, window.innerHeight);
+      if (containerRef.current) {
+        // Set renderer size to match container size
+        renderer.setSize(containerRef.current.clientWidth, containerRef.current.clientHeight);
+      }
     };
 
     const animate = () => {
@@ -106,10 +110,24 @@ const ThreeDModel = () => {
 
     return () => {
       window.removeEventListener('resize', onWindowResize);
+      if (renderer) renderer.dispose();
+      if (scene) cleanUpScene();
     };
   }, []);
 
-  return <div ref={containerRef} style={{ width: '100%', height: '100vh' }} />;
+  return (
+    <div
+      ref={containerRef}
+      style={{
+        width: '70%', // 50% of the screen width
+        height: '70vh', // 50% of the viewport height
+        position: 'absolute',
+        top: '25%', // Center vertically
+        left: '25%', // Center horizontally
+        overflow: 'hidden' // Ensure no overflow
+      }}
+    />
+  );
 };
 
 export default ThreeDModel;

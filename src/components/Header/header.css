@@ -1,0 +1,36 @@
+.headu
+{
+    background-image: url('../../img/headbg.png');
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+.hall
+{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.hdet p{
+    color: var(--WHITISH, #EFFFFB);
+font-family: "Gemunu Libre";
+font-size: 115px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+}
+.hdet h3{
+    color: var(--WHITISH, #EFFFFB);
+font-family: "Gemunu Libre";
+font-size: 115px;
+font-style: normal;
+font-weight: 800;
+line-height: normal;
+}
+.thmd
+{
+    width: 100px;
+    height: 100px;
+}
