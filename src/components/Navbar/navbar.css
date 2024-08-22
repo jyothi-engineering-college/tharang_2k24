@@ -11,7 +11,9 @@
     border: 0.5px solid var(--WHITISH, #EFFFFB);
     background: rgba(76, 76, 76, 0.25);
     backdrop-filter: blur(9.050000190734863px);
-    padding-top: 29px;
+    position: sticky;
+    top : 0;
+    z-index: 1;
 
 }
 .navb img

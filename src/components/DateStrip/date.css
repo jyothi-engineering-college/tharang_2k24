@@ -1,0 +1,37 @@
+.wstrip
+{
+    width: 100%;
+    height: auto;
+    background: var(--WHITISH, #EFFFFB);
+}
+.wstrip h3{
+    color: var(--B100, #272727);
+font-family: Genos;
+font-size: 96px;
+font-style: normal;
+font-weight: 800;
+line-height: normal;
+margin: 0;
+padding-top: 20px;
+padding-bottom: 20px;
+}
+.nstrip
+{
+    width: 100%;
+    height: auto;
+}
+.nstrip h3{
+    color: var(--WHITISH, #EFFFFB);
+font-family: Genos;
+font-size: 96px;
+font-style: normal;
+font-weight: 900;
+line-height: normal;
+margin: 0;
+padding-top: 20px;
+padding-bottom: 20px;
+}
+.indu
+{
+    z-index: 0;
+}

@@ -7,7 +7,6 @@ import 'animate.css';
 function Header() {
   return (
     <div className='headu'>
-      <Navbar/>
         <div className="hall">
         <div className="hdet animate__animated animate__backInUp">
         <p>Let's Get</p>
