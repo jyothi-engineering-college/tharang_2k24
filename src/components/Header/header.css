@@ -5,13 +5,19 @@
     height: 100vh;
     background-size: cover;
     background-repeat: no-repeat;
-
+    background-position: center;
+    background-attachment: fixed;
+    margin: 0;
+    padding-top: 29px;
 }
 .hall
 {
     display: flex;
     gap: 10px;
     align-items: center;
+    height: 70vh;
+    padding-left: 53px;
+   
 }
 .hdet p{
     color: var(--WHITISH, #EFFFFB);
@@ -20,6 +26,7 @@ font-size: 115px;
 font-style: normal;
 font-weight: 500;
 line-height: normal;
+margin: 2px;
 }
 .hdet h3{
     color: var(--WHITISH, #EFFFFB);
@@ -28,9 +35,22 @@ font-size: 115px;
 font-style: normal;
 font-weight: 800;
 line-height: normal;
+margin: 2px;
 }
 .thmd
 {
     width: 100px;
     height: 100px;
+}
+.tit
+{
+    color: var(--WHITISH, #EFFFFB);
+font-family: "Gemunu Libre";
+font-size: 64px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+text-align: center;
+margin: 0;
+padding: 20px;
 }

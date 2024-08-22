@@ -11,7 +11,7 @@ const ThreeDModel = () => {
     const clock = new THREE.Clock();
 
     // Fixed aspect ratio (e.g., 16:9)
-    const aspectRatio = 16 / 9;
+    const aspectRatio = 16 /9;
 
     const cleanUpScene = () => {
       if (scene) {
@@ -123,7 +123,7 @@ const ThreeDModel = () => {
         height: '70vh', // 50% of the viewport height
         position: 'absolute',
         top: '25%', // Center vertically
-        left: '25%', // Center horizontally
+        left: '30%', // Center horizontally
         overflow: 'hidden' // Ensure no overflow
       }}
     />
