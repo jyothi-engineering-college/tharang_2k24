@@ -1,0 +1,71 @@
+.navb
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 17px;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 13px;
+    border: 0.5px solid var(--WHITISH, #EFFFFB);
+    background: rgba(76, 76, 76, 0.25);
+    backdrop-filter: blur(9.050000190734863px);
+    position: sticky;
+    top : 0;
+    z-index: 1;
+
+}
+.navb img
+{
+    width: 106px;
+height: 94px;
+}
+
+.ruter
+{
+    display: inline-flex;
+align-items: center;
+gap: 22px;
+}
+
+.rutl
+{
+    color: #FFF;
+font-family: "Gemunu Libre";
+font-size: 32px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+text-decoration: none;
+}
+
+.ruter Link:hover
+{
+    color: #FFD700;
+}
+
+.hlog
+{
+    display: inline-flex;
+align-items: center;
+gap: 22px;
+}
+.hlog img{
+    width: 47px;
+height: 47px;
+}
+.hlog p{
+    color: var(--WHITISH, #EFFFFB);
+font-family: "Gemunu Libre";
+font-size: 32px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+.nervara
+{
+    width: 2px;
+height: 31px;
+background: #4F98CA;
+}
