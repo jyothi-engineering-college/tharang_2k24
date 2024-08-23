@@ -6,6 +6,7 @@ import About from '../../components/About/About';
 import Navbar from '../../components/Navbar/Navbar';
 import './home.css';
 import DateStrip from '../../components/DateStrip/DateStrip';
+import Bento from '../../components/Bento/Bento';
 
 function Home() {
   return (
@@ -15,6 +16,7 @@ function Home() {
     <Header/>
     <DateStrip/>
     <About/>
+    <Bento/>
     </div></>
   )
 }

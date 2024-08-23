@@ -6,7 +6,7 @@ function DateStrip() {
   return (
     <div className='dtst'>
         <div className="wstrip">
-            <Marquee className='indu' speed={40}>
+            <Marquee className='indu' speed={60}>
             <h3>OCTOBER - 2,3   OCTOBER - 2,3</h3>
             </Marquee>
         </div>
