@@ -1,7 +1,6 @@
 import React from 'react';
 import './header.css';
 import ThreeDModel from '../Collada/ThreeDModel';
-import Navbar from '../Navbar/Navbar';
 import 'animate.css';
 
 function Header() {

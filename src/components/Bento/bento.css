@@ -1,0 +1,201 @@
+.liner
+{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding-left: 53px;
+}
+.liner img{
+    width: 26px;
+height: 23px;
+}
+.liner p{
+    color: var(--WHITISH, #EFFFFB);
+font-family: "Gemunu Libre";
+font-size: 24px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+}
+.thazhevara
+{
+    background: #515151;
+    height: 1px;
+    width: 93%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+}
+.bentoup
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.bento1
+{
+    border-radius: 30px;
+    width: 50%;
+    height: auto;
+    background-image: url("../../img/b1bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 46px;
+    padding-bottom: 30px;
+    margin-left: 53px;
+    margin-bottom: 29px;
+
+}
+.bhead
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 26px;
+    padding-right: 26px;
+    margin-bottom: 26px;
+    
+}
+.bhead p
+{
+    color: var(--WHITISH, #EFFFFB);
+    font-family: "Gemunu Libre";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.9px;
+    margin: 0;
+}
+.bhead h3{
+    color: var(--WHITISH, #EFFFFB);
+font-family: "Gemunu Libre";
+font-size: 36px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+margin: 0;
+}
+.bdesc
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 26px;
+    padding-right: 100px;
+    margin-bottom: 20px;
+}
+.bdesc p
+{
+    color: #FFF;
+font-family: "Gemunu Libre";
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+width: 50%;
+margin: 0;
+}
+.bdesc img
+{width: 196px;
+    height: 168px;
+}
+.bevn
+{
+    border-radius: 19px;
+background: var(--BLUE, #4F98CA);
+border: none;
+display: inline-flex;
+padding: 13px 20px;
+justify-content: center;
+align-items: center;
+gap: 10px;
+color: var(--WHITISH, #EFFFFB);
+font-family: "Gemunu Libre";
+font-size: 16px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+margin-left: 27px;
+}
+.bento2
+{
+    border-radius: 30px;
+    width: 40%;
+    height: auto;
+    background-image: url("../../img/b2bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 35px;
+    padding-bottom: 13px;
+    margin-right: 53px;
+    margin-bottom: 29px;
+}
+.b2head
+{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 32px;
+    padding-right: 32px;
+}
+.b2head p{
+    color: #FFF;
+font-family: "Gemunu Libre";
+font-size: 20px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+margin: 0;
+}
+.b2head img{
+    object-fit: contain;
+}
+.bevent
+{
+    display: flex;
+    align-items: center;
+    gap: 23px;
+    padding-left: 33px;
+}
+.bedet h3
+{
+    color: #FFF;
+font-family: "Gemunu Libre";
+font-size: 48px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+margin: 0;
+}
+.dpp{
+    color: #FFF;
+font-family: "Gemunu Libre";
+font-size: 20px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+margin: 0;
+}
+.locc
+{
+    color: #FFF;
+font-family: "Gemunu Libre";
+font-size: 20px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+    margin-top: 33px;
+}
+.marke
+{
+    -webkit-text-stroke-width: 1;
+-webkit-text-stroke-color: var(--WHITISH, #EFFFFB);
+font-family: Genos;
+font-size: 40px;
+font-style: normal;
+font-weight: 900;
+line-height: normal;
+opacity: 0.53;
+color: none;
+}
