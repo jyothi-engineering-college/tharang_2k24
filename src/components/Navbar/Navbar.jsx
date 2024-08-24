@@ -1,7 +1,7 @@
 import React from 'react';
 import Tharangam from "../../img/headerlog.jpg";
 import UserLog from "../../img/userlog.svg";
-import './Navbar.css';
+import './navbar.css';
 import { Link } from 'react-router-dom';
 
 function Navbar() {
