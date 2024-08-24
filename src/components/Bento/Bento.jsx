@@ -5,6 +5,7 @@ import BentoBg from '../../img/bentobg.png';
 import ArrowUp from '../../img/arrow-up.png';
 import CodePlus from '../../img/code.png';
 import Marquee from 'react-fast-marquee';
+import SocialM from "../../img/social.png";
 
 function Bento() {
   return (
@@ -43,6 +44,13 @@ function Bento() {
             <Marquee className='marke'> THARANG THARANG </Marquee>
             </div>
             
+        </div>
+        <div className="bento3">
+            <img src={SocialM} alt="Social Media" />
+            <div className="b3det">
+                <p>get our Showcase</p>
+                <h3>Follow our social Media</h3>
+            </div>
         </div>
     </div>
   )

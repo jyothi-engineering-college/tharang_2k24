@@ -32,6 +32,7 @@ line-height: normal;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 20px;
 }
 .bento1
 {
@@ -43,7 +44,7 @@ line-height: normal;
     background-size: cover;
     padding-top: 46px;
     padding-bottom: 30px;
-    margin-left: 53px;
+    margin-left: 88px;
     margin-bottom: 29px;
 
 }
@@ -129,7 +130,7 @@ margin-left: 27px;
     background-size: cover;
     padding-top: 35px;
     padding-bottom: 13px;
-    margin-right: 53px;
+    margin-right: 88px;
     margin-bottom: 29px;
 }
 .b2head
@@ -198,4 +199,47 @@ font-weight: 900;
 line-height: normal;
 opacity: 0.53;
 color: none;
+}
+.bento3
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 75px;
+    margin-right: 75px;
+    padding-top: 42px;
+    padding-bottom: 42px;
+    margin-bottom: 20px;
+    background: #393939;
+    border-radius: 30px;
+}
+.bento3 img{
+    object-fit: contain;
+    padding-left: 75px;
+    
+}
+
+.b3det p{
+    color: var(--WHITISH, #EFFFFB);
+font-family: "Gemunu Libre";
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+letter-spacing: 1.2px;
+  
+}
+.b3det h3{
+    color: var(--WHITISH, #EFFFFB);
+font-family: "Gemunu Libre";
+font-size: 48px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+margin: 0;
+}
+
+.b3det{
+    display: block;
+    padding-right: 75px;  
 }
