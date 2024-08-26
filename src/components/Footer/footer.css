@@ -1,0 +1,40 @@
+.thazhevara
+{
+    background: #515151;
+    height: 1px;
+    width: 93%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+}
+.tfoot
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 130px;
+    margin-bottom: 100px;
+    padding-left: 93px;
+    padding-top: 50px;
+} 
+.tfoot p
+{
+    margin: 0;
+    color: #FFF;
+font-family: "Gemunu Libre";
+font-size: 15px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+}
+.tfoot h3
+{
+    margin: 0;
+    color: #FFF;
+font-family: "Gemunu Libre";
+font-size: 40px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+}
