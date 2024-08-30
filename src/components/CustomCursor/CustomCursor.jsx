@@ -67,8 +67,8 @@ const CustomCursor = () => {
         position: 'fixed',
         top: 0,
         left: 0,
-        width: isHovered ? '30px' : '20px', // Increase size when hovered
-        height: isHovered ? '30px' : '20px',
+        width: isHovered ? '30px' : '10px', // Increase size when hovered
+        height: isHovered ? '30px' : '10px',
         borderRadius: '50%',
         pointerEvents: 'none', // Ensure it doesn't block interactions
         zIndex: 9999,

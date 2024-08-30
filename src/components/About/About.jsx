@@ -4,7 +4,7 @@ import Thara from "../../img/thara.png";
 
 function About() {
   return (
-    <div className='abt'>
+    <div className='abt' id='abtt'>
         <div className="abh">
             <div className="wner"></div>
             <h3>A Word on ..</h3>
