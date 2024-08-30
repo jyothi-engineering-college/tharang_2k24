@@ -1,0 +1,24 @@
+.navEvents{
+    display: inline-flex;
+align-items: center;
+gap: 18px;
+}
+.navTab{
+    display: flex;
+width: 115px;
+height: 50px;
+justify-content: center;
+align-items: center;
+border-radius: 8px;
+border: 1px solid  #EFFFFB;
+}
+.navTabcontent{
+color: #EFFFFB;
+text-align: center;
+font-family: "Gemunu Libre";
+font-size: 32px;
+font-style: normal;
+font-weight: 500;
+line-height: 20px; /* 62.5% */
+letter-spacing: 0.1px;
+}
