@@ -1,10 +1,13 @@
 import React from 'react';
 import './about.css';
 import Thara from "../../img/thara.png";
+import { Outlet } from 'react-router-dom';
 
 function About() {
   return (
+  <>
     <div className='abt' id='abtt'>
+      
         <div className="abh">
             <div className="wner"></div>
             <h3>A Word on ..</h3>
@@ -17,6 +20,7 @@ Jyothi Engineering College (JEC) set up in 2002, under the aegis of Thrissur Edu
     <img src={Thara} alt="Tharang"/>
     </div>
     </div>
+    </>
   )
 }
 
