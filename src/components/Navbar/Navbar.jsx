@@ -10,7 +10,7 @@ function Navbar() {
       <img src={Tharangam} alt="TharangLogo" />
       <div className="ruter">
         <Link className='rutl' to="/">Home</Link>
-        <Link className='rutl' to="/about">About</Link> 
+        <Link className='rutl' to="/#abtt">About</Link> 
         <Link className='rutl' to="/events">Events</Link>
         <Link className='rutl' to="/sponsor">Sponsor</Link>
         <Link className='rutl' to="/contact">Contact</Link>
