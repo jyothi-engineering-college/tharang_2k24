@@ -1,7 +1,9 @@
 .navEvents{
-    display: inline-flex;
+    display: flex;
 align-items: center;
+justify-content: center;
 gap: 18px;
+margin-bottom: 103px;
 }
 .navTab{
     display: flex;
@@ -21,4 +23,122 @@ font-style: normal;
 font-weight: 500;
 line-height: 20px; /* 62.5% */
 letter-spacing: 0.1px;
+}
+.evhd
+{
+    color: var(--WHITISH, #EFFFFB);
+font-family: "Gemunu Libre";
+font-size: 64px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+text-align: center;
+}
+
+.liner
+{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding-left: 53px;
+}
+.liner img{
+    width: 26px;
+height: 23px;
+}
+.liner p{
+    color: var(--WHITISH, #EFFFFB);
+font-family: "Gemunu Libre";
+font-size: 24px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+}
+.thazhevara
+{
+    background: #515151;
+    height: 1px;
+    width: 93%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+}
+
+/*gen*/
+/* Adjusted class */
+.econtainer {
+  position: relative;
+  width: 400px; /* Fixed width */
+  height: 400px; /* Fixed height */
+  overflow: hidden;
+  border-radius: 19px; /* Ensures the zoomed image doesn't overflow */
+}
+
+.codooo {
+  display: block;
+  border-radius: 19px;
+  background: #272727;
+  width: 100%; /* Maintain width of the container */
+  height: 100%; /* Maintain height of the container */
+  transition: transform 0.5s ease; /* Smooth transition for zoom effect */
+}
+
+.eoverlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease; /* Smooth transition for overlay */
+  background: linear-gradient(
+    0deg, 
+    rgba(0, 0, 0, 1) 0%,       /* Solid black at the bottom */
+    rgba(0, 0, 0, 0) 100%      /* Transparent at the top */
+  );
+  display: flex; /* Enables flexbox */
+  flex-direction: column; /* Stacks children vertically */
+  justify-content: flex-end; /* Aligns children to the bottom */
+  padding: 20px; /* Optional padding */
+  text-align: left; /* Centers text horizontally */
+}
+
+.econtainer:hover .eoverlay {
+  opacity: 1.0;
+}
+
+.econtainer:hover .codooo {
+  transform: scale(1.2);
+ 
+}
+
+.eoverlay h3 {
+  color: var(--WHITISH, #EFFFFB);
+  font-family: "Gemunu Libre";
+  font-size: 52px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px; /* 31.25% */
+  letter-spacing: 0.1px;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.eoverlay p {
+  color: var(--WHITISH, #EFFFFB);
+  font-family: "Gemunu Libre";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 20px; /* 100% */
+  letter-spacing: 0.1px;
+}
+.evegrid
+{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 20px;
+    margin-bottom: 50px;
+    padding-left: 116px;
 }
