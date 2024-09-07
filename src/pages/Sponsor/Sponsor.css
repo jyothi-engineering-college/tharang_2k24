@@ -1,0 +1,86 @@
+.sphd
+{
+    
+    display: inline-flex;
+align-items: center;
+gap: 197px;
+padding-left: 55px;
+padding-right: 55px;
+padding-top: 100px;
+padding-bottom: 100px;
+}
+.valyah
+{
+    display: block;
+}
+.valyah p{
+    color: #FFF;
+font-family: "Gemunu Libre";
+font-size: 32px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+margin: 0;
+width: 50%;
+}
+.cheriyah
+{
+    width: 50%;
+}
+.valyah h3
+{
+    color: var(--WHITISH, #EFFFFB);
+font-family: "Gemunu Libre";
+font-size: 88px;
+font-style: normal;
+font-weight: 800;
+line-height: normal;
+margin: 0;
+}
+.cheriyah p{
+    color: #FFF;
+font-family: "Gemunu Libre";
+font-size: 32px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+
+}
+.sponsind img
+{
+    width: 80%;
+}
+.sponsind
+{
+    display: inline-flex;
+    align-items: center;
+gap: 70px;
+padding-left: 130px;
+padding-top: 75px;
+
+}
+.sponsind h3
+{
+    color: var(--WHITISH, #EFFFFB);
+text-align: center;
+font-family: "Gemunu Libre";
+font-size: 42px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+}
+.thazhevaras
+{
+    background: #515151;
+    height: 1px;
+    width: 93%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.sponsbg
+{
+    background-image: url("../../img/spbg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
