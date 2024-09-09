@@ -1,0 +1,108 @@
+.teamhd p{
+    color: var(--WHITISH, #EFFFFB);
+text-align: center;
+font-family: "Gemunu Libre";
+font-size: 68px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+margin-bottom: 0;
+}
+.teamhd h3{
+    color: var(--WHITISH, #EFFFFB);
+text-align: center;
+font-family: "Gemunu Libre";
+font-size: 100px;
+font-style: normal;
+font-weight: 800;
+line-height: normal;
+margin-top: 0;
+}
+.devpad
+{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin-bottom: 30px;
+    padding-left: 50px;
+    gap: 50px;
+
+}
+.devi {
+    width: 328px;
+    height: 427px;
+    flex-shrink: 0;
+    border-radius: 44px;
+    position: relative;
+    filter: grayscale(100%); /* Grayscale filter by default */
+    transition: filter 0.5s ease, transform 0.8s ease; /* Smooth transitions for filter and transform */
+    background-repeat: no-repeat;
+    background-size: cover; /* Default background size */
+    background-position: center; /* Center the background image */
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)); /* Default gradient */
+    margin-bottom: 30px;
+}
+
+.devi.alanjs {
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)), /* Black to transparent gradient */
+                      url("../../img/alanjs.png"); /* Background image */
+}
+
+.devi.adarshs {
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)), /* Black to transparent gradient */
+                      url("../../img/adarsham.png"); /* Background image */
+}
+.devi.abidd {
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)), /* Black to transparent gradient */
+                      url("../../img/thotta.png"); /* Background image */
+}
+.devi.vakkil {
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)), /* Black to transparent gradient */
+                      url("../../img/vakkil.png"); /* Background image */
+}
+
+.devi:hover {
+    filter: grayscale(0%); /* Remove grayscale on hover */
+    transform: scale(1.2); /* Smooth zoom effect */
+}
+
+
+.sidevara {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 58px;
+    height: 0px; /* Set a visible height */
+    transform: rotate(90deg);
+    background-color: #FFF; /* Use background color to make it visible */
+    flex-shrink: 0;
+}
+
+.devit h3{
+    color: #FFF;
+text-align: left;
+font-family: "Gemunu Libre";
+font-size: 36px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+margin: 0;
+padding-left: 20px;
+}
+.devit p{
+    color: #FFF;
+text-align: left;
+font-family: "Gemunu Libre";
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+padding-left: 20px;
+margin: 0;
+margin-bottom: 30px;
+}
+.devit{
+    position: absolute;
+  bottom: 0;
+  left: 0;
+  
+}

@@ -2,6 +2,7 @@ import React from 'react';
 import './header.css';
 import ThreeDModel from '../Collada/ThreeDModel';
 import 'animate.css';
+import Countdown from '../Countdown/Countdown';
 
 function Header() {
   return (
@@ -13,7 +14,8 @@ function Header() {
         </div>
         <ThreeDModel/>
         </div>
-        <h3 className='tit animate__animated animate__fadeInUp'>This is Tharang 2024 !</h3>
+        {/* <h3 className='tit animate__animated animate__fadeInUp'>This is Tharang 2024 !</h3> */}
+        <Countdown/>
     </div>
   )
 }
