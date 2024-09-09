@@ -17,23 +17,43 @@ const EventsNav = () => {
         </div>
         <div className="navTab">
             <p className="navTabcontent">
-                AD
+                BSH
             </p>
         </div>  <div className="navTab">
             <p className="navTabcontent">
-                AD
+                CE
             </p>
         </div>  <div className="navTab">
             <p className="navTabcontent">
-                AD
+                CSE
             </p>
         </div>  <div className="navTab">
             <p className="navTabcontent">
-                AD
+                CY
             </p>
         </div>  <div className="navTab">
             <p className="navTabcontent">
-                AD
+                ECE
+            </p>
+        </div>
+        <div className="navTab">
+            <p className="navTabcontent">
+                EEE
+            </p>
+        </div>
+        <div className="navTab">
+            <p className="navTabcontent">
+                ME
+            </p>
+        </div>
+        <div className="navTab">
+            <p className="navTabcontent">
+                MR
+            </p>
+        </div>
+        <div className="navTab">
+            <p className="navTabcontent">
+                RA
             </p>
         </div>
 

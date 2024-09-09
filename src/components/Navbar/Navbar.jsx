@@ -21,7 +21,7 @@ function Navbar() {
         <Link className='rutl' to="/" onClick={() => handleScrollToSection('abtt')}>About</Link> 
         <Link className='rutl' to="/events">Events</Link>
         <Link className='rutl' to="/sponsor">Sponsor</Link>
-        <Link className='rutl' to="/contact">Contact</Link>
+        <Link className='rutl' to="/team">Team</Link>
       </div>
       <div className="hlog">
         <img src={UserLog} alt="userlogin" />
