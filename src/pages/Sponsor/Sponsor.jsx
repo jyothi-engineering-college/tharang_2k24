@@ -1,8 +1,8 @@
 import React from 'react';
-import './sponsor.css';
 import Navbar from '../../components/Navbar/Navbar'
 import Footer from '../../components/Footer/Footer'
 import ThSpon from '../../img/spons.png';
+import './sponsors.css';
 
 function Sponsor() {
   return (
