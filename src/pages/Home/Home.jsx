@@ -10,6 +10,8 @@ import Bento from '../../components/Bento/Bento';
 import Footer from '../../components/Footer/Footer';
 
 function Home() {
+
+
   return (
     <>
     
@@ -17,6 +19,9 @@ function Home() {
     <Navbar/>
     <Header/>
     <DateStrip/>
+
+    
+
     <About/>
     <Bento/>
     <Footer/>

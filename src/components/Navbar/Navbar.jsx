@@ -5,12 +5,20 @@ import './navbar.css';
 import { Link } from 'react-router-dom';
 
 function Navbar() {
+
+  const handleScrollToSection = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <div className='navb'>
       <img src={Tharangam} alt="TharangLogo" />
       <div className="ruter">
         <Link className='rutl' to="/">Home</Link>
-        <Link className='rutl' to="/about">About</Link> 
+        <Link className='rutl' to="/" onClick={() => handleScrollToSection('abtt')}>About</Link> 
         <Link className='rutl' to="/events">Events</Link>
         <Link className='rutl' to="/sponsor">Sponsor</Link>
         <Link className='rutl' to="/contact">Contact</Link>
