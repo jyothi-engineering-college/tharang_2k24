@@ -5,14 +5,14 @@ import Navbar from "../../components/Navbar/Navbar"
 import "./Events.css"
 const Events = () => {
   return (
-    <>
+    <div className="eventsall">
     <Navbar/>
     <h3 className="evhd">Events</h3>
     
     <EventsNav/>
     <EventInd/>
     <Footer/>    
-    </>
+    </div>
   )
 }
 

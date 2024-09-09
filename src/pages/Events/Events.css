@@ -142,3 +142,9 @@ line-height: normal;
     margin-bottom: 50px;
     padding-left: 116px;
 }
+.eventsall
+{
+  background-image: url("../../img/spbg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}

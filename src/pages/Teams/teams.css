@@ -106,3 +106,9 @@ margin-bottom: 30px;
   left: 0;
   
 }
+.teamsall
+{
+    background-image: url("../../img/spbg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}

@@ -5,7 +5,7 @@ import Footer from '../../components/Footer/Footer';
 
 function Teams() {
   return (
-    <div>
+    <div className='teamsall'>
         <Navbar/>
             <div className="teamhd">
                 <p>The brilliant heads behind this</p>
