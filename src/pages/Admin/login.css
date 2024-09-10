@@ -1,0 +1,62 @@
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    .loghd
+    {
+        width: 90%;
+        display: flex;
+justify-content: space-between;
+align-items: center;
+margin-left: auto;
+margin-right: auto;
+padding: 20px;
+    }
+    .logmn
+    {
+        display: flex;
+        flex-direction: column;
+        width: 95%;
+        position: absolute ;
+        top: 40%;
+        bottom:40% ;
+        left: 5%;       
+    }
+    .logmn p
+    {
+        color: #FFF;
+text-align: center;
+font-family: "Gemunu Libre";
+font-size: 32px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+    }
+    .logmn input
+    {
+        width: 372px;
+        height: 56px;
+        flex-shrink: 0;
+        border-radius: 6px;
+background: var(--WHITISH, #EFFFFB);
+margin-bottom: 37px;
+    }
+    .logmn button
+    {
+        display: inline-flex;
+padding: 13px 15px;
+justify-content: center;
+align-items: center;
+gap: 10px;
+border: none;
+border-radius: 10px;
+background: #35B873;
+color: #FFF;
+text-align: center;
+font-family: "Gemunu Libre";
+font-size: 32px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+width: 95%;
+    }
+
+  }
