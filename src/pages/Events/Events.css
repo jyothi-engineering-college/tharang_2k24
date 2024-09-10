@@ -4,6 +4,7 @@ align-items: center;
 justify-content: center;
 gap: 18px;
 margin-bottom: 103px;
+cursor: pointer;
 }
 .navTab{
     display: flex;
@@ -118,8 +119,9 @@ line-height: normal;
   font-family: "Gemunu Libre";
   font-size: 52px;
   font-style: normal;
+  word-wrap: 5px;
+  width: 90%;
   font-weight: 700;
-  line-height: 20px; /* 31.25% */
   letter-spacing: 0.1px;
   margin: 0;
   margin-bottom: 10px;
