@@ -52,7 +52,6 @@ const ThreeDModel = () => {
       // Load collada model
       const loader = new ColladaLoader();
       loader.load('/models/stormtrooper.dae', (collada) => {
-        console.log(collada);
         
         const avatar = collada.scene;
         const animations = avatar.animations;

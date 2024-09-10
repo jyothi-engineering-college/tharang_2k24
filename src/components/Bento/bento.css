@@ -159,11 +159,20 @@ margin: 0;
     gap: 23px;
     padding-left: 33px;
 }
+
+.bevent img
+{
+    width: 161px;
+    height: 161px;
+    border-radius: 13px;
+    box-shadow: 0px 4px 12.2px 3px rgba(39, 39, 39, 0.30);
+}
 .bedet h3
 {
     color: #FFF;
 font-family: "Gemunu Libre";
-font-size: 48px;
+font-size: 38px;
+word-break: break-all;
 font-style: normal;
 font-weight: 700;
 line-height: normal;
