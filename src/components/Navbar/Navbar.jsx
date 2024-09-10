@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Tharangam from "../../img/headerlog.jpg";
 import UserLog from "../../img/userlog.svg";
 import './navbar.css';
 import { Link } from 'react-router-dom';
 
 function Navbar() {
+  const [isHidden, setIsHidden] = useState(false);
+  const [lastScrollTop, setLastScrollTop] = useState(0);
 
   const handleScrollToSection = (id) => {
     const element = document.getElementById(id);
@@ -13,8 +15,25 @@ function Navbar() {
     }
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+      if (scrollTop > lastScrollTop) {
+        setIsHidden(true); // Scrolling down
+      } else {
+        setIsHidden(false); // Scrolling up
+      }
+
+      setLastScrollTop(scrollTop <= 0 ? 0 : scrollTop); // Prevent negative scroll
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [lastScrollTop]);
+
   return (
-    <div className="navb">
+    <div className='navb'>
       <img src={Tharangam} alt="TharangLogo" />
       <div className="ruter">
         <Link className="rutl" to="/">
