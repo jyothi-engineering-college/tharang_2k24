@@ -37,7 +37,7 @@ const Login = () => {
   }, [navigate]);
 
   return (
-    <>
+    <div className="loginall">
     <div className="loghd">
     <img src={Tharangam}  alt="tharang" />
       <img src={Jyolog}  alt="jyohi" />
@@ -45,13 +45,12 @@ const Login = () => {
     <div className="logmn">
       <p>Login to Admin</p>
       <input type="text"
-        className="input is-primary bulin"
+        
         placeholder="Email"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
         required />
       <input type="password"
-        className="input is-primary bulin"
         placeholder="Password"
         value={password}
         onChange={(e) => setPassword(e.target.value)}
@@ -78,7 +77,7 @@ const Login = () => {
       <button type="submit">Login</button>
       {error && <p style={{ color: "red" }}>{error}</p>}
     </form> */}
-    </>
+    </div>
   );
 };
 

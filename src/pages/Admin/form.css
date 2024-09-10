@@ -6,8 +6,7 @@
         display: flex;
 justify-content: space-between;
 align-items: center;
-margin-left: auto;
-margin-right: auto;
+margin: 0;
 padding: 20px;
     }
     .submitform
@@ -68,6 +67,29 @@ gap: 10px;
 border: none;
 border-radius: 10px;
 background: #35B873;
+color: #FFF;
+text-align: center;
+font-family: "Gemunu Libre";
+font-size: 32px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+/* width: 95%; */
+margin-left: auto;
+margin-right: auto;
+margin: 20px;
+margin-bottom: 80px;
+}
+.poyko
+{
+    display: inline-flex;
+padding: 13px 15px;
+justify-content: center;
+align-items: center;
+gap: 10px;
+border: none;
+border-radius: 10px;
+background: #FF1E00;
 color: #FFF;
 text-align: center;
 font-family: "Gemunu Libre";
