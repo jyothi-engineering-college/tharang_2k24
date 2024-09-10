@@ -15,7 +15,7 @@ function Teams() {
                 <div className="devi alanjs">
                     <div className="sidevara"></div>
                     <div className="devit"><h3>Alan Jose Santo</h3>
-                    <p>Development Lead</p></div>
+                    <p>UI & Development Lead</p></div>
                 </div>
                 <div className="devi adarshs">
                     <div className="sidevara"></div>
@@ -31,6 +31,11 @@ function Teams() {
                     <div className="sidevara"></div>
                     <div className="devit"><h3>Abid Ahhamad</h3>
                     <p>Frontend Dev</p></div>
+                </div>
+                <div className="devi arunj">
+                    <div className="sidevara"></div>
+                    <div className="devit"><h3>Arun John</h3>
+                    <p>Backend Dev</p></div>
                 </div>
             </div>
         <Footer/>
