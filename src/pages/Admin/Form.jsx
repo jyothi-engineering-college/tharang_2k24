@@ -1,13 +1,33 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { initializeApp } from "firebase/app";
+import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
+import './form.css';
+import Jyolog from "../../img/jyosmall.png";
+import Tharangam from "../../img/tharangsmall.png";
 import { supabase } from "../../Supabaseconffig";
+
+// Your Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyDeqgUErZvfAE2ODyXjTfCxSJnYKo-qhRg",
+  authDomain: "tharang-b7367.firebaseapp.com",
+  projectId: "tharang-b7367",
+  storageBucket: "tharang-b7367.appspot.com",
+  messagingSenderId: "7396366719",
+  appId: "1:7396366719:web:734bbc6b84b9239c12624a"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const storage = getStorage(app);
 
 const Form = () => {
   const [deptName, setDeptName] = useState("");
   const [eventName, setEventName] = useState("");
   const [locationDateTime, setLocationDateTime] = useState("");
   const [description, setDescription] = useState("");
-  const [driveLink, setDriveLink] = useState("");
+  const [poster, setPoster] = useState(null); // For storing selected poster
+  const [posterURL, setPosterURL] = useState(""); // URL to store in the database
   const [googleFormLink, setGoogleFormLink] = useState("");
   const [contact, setContact] = useState("");
   const [error, setError] = useState("");
@@ -22,9 +42,31 @@ const Form = () => {
     }
   }, [navigate]);
 
+  // Handle file input change
+  const handleFileChange = async (e) => {
+    const file = e.target.files[0];
+    if (file && file.size < 1 * 1024 * 1024) { // Check if the file is less than 1MB
+      setPoster(file);
+      setError("");
+
+      // Upload the file to Firebase Storage
+      const storageRef = ref(storage, `posters/${file.name}`);
+      try {
+        await uploadBytes(storageRef, file);
+        const downloadURL = await getDownloadURL(storageRef);
+        setPosterURL(downloadURL); // Set the download URL for database storage
+      } catch (uploadError) {
+        setError("Failed to upload poster image.");
+      }
+    } else {
+      setError("File size must be less than 1 MB.");
+    }
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    // Validate input fields
     const locationDateTimeRegex =
       /^.+ \| \d{1,2} [a-zA-Z]{3} \| \d{1,2}\.\d{2}(am|pm)$/;
     if (!locationDateTimeRegex.test(locationDateTime)) {
@@ -34,13 +76,20 @@ const Form = () => {
       return;
     }
 
+    // Check if the poster URL is available
+    if (!posterURL) {
+      setError("Please upload the poster image first.");
+      return;
+    }
+
+    // Insert data into the database (replace with your database logic)
     const { error: supabaseError } = await supabase.from("events").insert([
       {
         department: deptName,
         event_name: eventName,
         loc_dt_tm: locationDateTime,
         description: description,
-        poster_url: driveLink,
+        poster_url: posterURL, // Use the Firebase Storage URL
         registerlink: googleFormLink,
         contact: contact,
       },
@@ -56,94 +105,87 @@ const Form = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} style={{ color: "wheat" }}>
-      <label>
-        Department Name:
+    <>
+      <div className="loghd">
+        <img src={Tharangam} alt="tharang" />
+        <img src={Jyolog} alt="jyohi" />
+      </div>
+      <p className="submithead">Event Submission Form</p>
+      <div className="submitform">
+        <p>Department</p>
         <select
+          className="submitselect"
           value={deptName}
           onChange={(e) => setDeptName(e.target.value)}
           required
         >
           <option value="">Select Department</option>
+          <option value="AD">AD</option>
+          <option value="BSH">BSH</option>
+          <option value="CE">CE</option>
           <option value="CSE">CSE</option>
+          <option value="CY">CY</option>
           <option value="ECE">ECE</option>
-          <option value="MECH">MECH</option>
+          <option value="EEE">EEE</option>
+          <option value="ME">ME</option>
+          <option value="MR">MR</option>
+          <option value="RA">RA</option>
         </select>
-      </label>
-      <br />
-
-      <label>
-        Event Name:
+        <p>Event Name</p>
         <input
+          className="submitselect"
           type="text"
+          placeholder="Event name"
           value={eventName}
           onChange={(e) => setEventName(e.target.value)}
           required
         />
-      </label>
-      <br />
-
-      <label>
-        Location | Date | Time (format:EAB 415 | 2 oct | 10.00am):
+        <p>Location | Date | Time</p>
         <input
+          className="submitselect"
           type="text"
           value={locationDateTime}
           onChange={(e) => setLocationDateTime(e.target.value)}
           placeholder="Location | yyyy-mm-dd | hh:mm"
           required
         />
-      </label>
-      <br />
-
-      <label>
-        Description:
+        <h3 className="submitspec">NB: format: EAB 415 | 2 oct | 10.00am</h3>
+        <p>Description</p>
         <textarea
+          className="submitselect"
           value={description}
           onChange={(e) => setDescription(e.target.value)}
           required
         ></textarea>
-      </label>
-      <br />
-
-      <label>
-        Contact:
+        <p>Poster Image</p>
         <input
-          type="text"
-          value={contact}
-          onChange={(e) => setContact(e.target.value)}
-          placeholder="Enter phone number"
+          className="submitselect"
+          type="file"
+          accept="image/*"
+          onChange={handleFileChange}
           required
         />
-      </label>
-      <br />
-
-      <label>
-        Drive Link:
+        {posterURL && (
+          <p>
+            Poster uploaded successfully! <br />
+            <a href={posterURL} target="_blank" rel="noopener noreferrer">
+              View Poster
+            </a>
+          </p>
+        )}
+        <p>Google Form Link</p>
         <input
-          type="url"
-          value={driveLink}
-          onChange={(e) => setDriveLink(e.target.value)}
-          required
-        />
-      </label>
-      <br />
-
-      <label>
-        Google Form Link:
-        <input
+          className="submitselect"
           type="url"
           value={googleFormLink}
           onChange={(e) => setGoogleFormLink(e.target.value)}
           required
         />
-      </label>
-      <br />
-
-      <button type="submit">Submit</button>
-
+        <button onClick={handleSubmit}>Submit</button>
+      </div>
       {error && <p style={{ color: "red" }}>{error}</p>}
       {success && <p style={{ color: "green" }}>{success}</p>}
-    </form>
+    </>
   );
 };
 
