@@ -104,6 +104,18 @@ const Form = () => {
     }
   };
 
+  const handleLogout = async () => {
+    const { error } = await supabase.auth.signOut();
+  
+    if (error) {
+      console.error("Error logging out:", error.message);
+    } else {
+      // Clear the session data from localStorage
+      localStorage.removeItem("userSession");
+      navigate("/login"); // Redirect to login page or any other desired page
+    }
+  };
+
   return (
     <>
       <div className="loghd">
@@ -182,7 +194,9 @@ const Form = () => {
           required
         />
         <button onClick={handleSubmit}>Submit</button>
+        
       </div>
+      <button className="poyko" onClick={handleLogout}>Logout</button>
       {error && <p style={{ color: "red" }}>{error}</p>}
       {success && <p style={{ color: "green" }}>{success}</p>}
     </>
