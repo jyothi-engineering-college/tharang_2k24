@@ -6,17 +6,23 @@ import Sponsor from './pages/Sponsor/Sponsor';
 import About from './components/About/About'; // Ensure this path is correct
 import './App.css';
 import Teams from './pages/Teams/Teams';
+import Login from './pages/Admin/Login';
+import Form from './pages/Admin/Form';
+import EventDetails from './pages/Events/EventDetails';
 
 function App() {
   return (
     <>
       <Router>
         <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/about' element={<About />} />
-          <Route path='/team' element={<Teams/>} />
-          <Route path='/events' element={<Events />} />
-          <Route path='/sponsor' element={<Sponsor />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/team" element={<Teams />} />
+          <Route path="/events" element={<Events />} />
+          <Route path="/event-details" element={<EventDetails />} />
+          <Route path="/sponsor" element={<Sponsor />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/form" element={<Form />} />
         </Routes>
       </Router>
     </>

@@ -1,64 +1,49 @@
 import React from "react";
-import CodooTharang from "../../img/code+.jpeg";
-import LsTg from "../../img/lasertag.jpg";
-import VrFu from "../../img/vr4u.jpg";
-import Playtopia from "../../img/playtopia.jpg";
+import { useNavigate } from "react-router-dom";
 import { supabase } from "../../Supabaseconffig";
-import { useEffect } from "react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function EventInd({ sendDeptChild }) {
-  const [deptData, setdeptData] = useState();
+  const [deptData, setDeptData] = useState([]);
+  const navigate = useNavigate();
 
   const fetchAllEvents = async () => {
-    if (sendDeptChild === "") {
-      console.log(sendDeptChild, "NULL");
-
-      const { data, error } = await supabase.from("events").select("*");
-      if (error) {
-        console.error(error);
-      } else {
-        setdeptData(data);
-      }
+    let query = supabase.from("events").select("*");
+    if (sendDeptChild) {
+      query = query.eq("department", sendDeptChild);
+    }
+    const { data, error } = await query;
+    if (error) {
+      console.error(error);
     } else {
-      console.log(sendDeptChild,"NOt NULL");
-
-      const { data, error } = await supabase
-        .from("events")
-        .select("*")
-        .eq("department", sendDeptChild);
-      if (error) {
-        console.error(error);
-      } else {
-        setdeptData(data);
-      }
+      setDeptData(data);
     }
   };
 
   useEffect(() => {
-    console.log("working");
-
     fetchAllEvents();
   }, [sendDeptChild]);
 
+  const handleClick = (event) => {
+    // Navigate to the details page with the event data
+    navigate("/event-details", { state: { event } });
+  };
+
   return (
     <div className="evegrid">
-      {deptData?.map((event, index) => {
-        return (
-          <div key={index} className="ecardi">
-            <div className="event-card">
-              <div className="econtainer">
-                <img className="codooo" src={event.poster_url} alt="Event" />
-                <div className="eoverlay">
-                  <h3 className="etext">{event.event_name}</h3>
-                  <p>{event.loc_dt_tm}</p>
-                </div>
+      {deptData.map((event, index) => (
+        <div onClick={() => handleClick(event)} key={index} className="ecardi">
+          <div className="event-card">
+            <div className="econtainer">
+              <img className="codooo" src={event.poster_url} alt="Event" />
+              <div className="eoverlay">
+                <h3 className="etext">{event.event_name}</h3>
+                <p>{event.loc_dt_tm}</p>
               </div>
             </div>
           </div>
-        );
-      })}
-      {/* LASER TAG */}
+        </div>
+      ))}
     </div>
   );
 }

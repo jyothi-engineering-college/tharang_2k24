@@ -7,11 +7,12 @@ import CodePlus from "../../img/code.png";
 import Marquee from "react-fast-marquee";
 import SocialM from "../../img/social.png";
 import { supabase } from "../../Supabaseconffig";
-import { useState } from "react";
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 function Bento() {
   const [eventsingle, setEventsingle] = useState();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchAllEvents = async () => {
@@ -26,6 +27,12 @@ function Bento() {
 
     fetchAllEvents();
   }, []);
+
+  const handleViewDetails = () => {
+    if (eventsingle) {
+      navigate("/event-details", { state: { event: eventsingle } });
+    }
+  };
 
   return (
     <div>
@@ -48,10 +55,9 @@ function Bento() {
             </p>
             <img src={BentoBg} alt="Bento Bg" />
           </div>
-          <button className="bevn">Go To Events</button>
         </div>
 
-        <div className="bento2">
+        <div onClick={handleViewDetails} className="bento2">
           <div className="b2head">
             <p>Event of the time</p>
             <img src={ArrowUp} alt="arrow" />
@@ -60,7 +66,7 @@ function Bento() {
             <div className="bevent">
               <img src={eventsingle.poster_url} alt="code" />
               <div className="bedet">
-                              <h3>{eventsingle.event_name}</h3>
+                <h3>{eventsingle.event_name}</h3>
                 <p className="dpp">Dept of {eventsingle.department}</p>
                 <p className="locc">{eventsingle.loc_dt_dm}</p>
               </div>
