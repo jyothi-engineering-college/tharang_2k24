@@ -6,7 +6,8 @@ font-size: 68px;
 font-style: normal;
 font-weight: 500;
 line-height: normal;
-margin-bottom: 0;
+margin: 0;
+padding-top: 200px;
 }
 .teamhd h3{
     color: var(--WHITISH, #EFFFFB);
@@ -58,6 +59,10 @@ margin-top: 0;
 .devi.vakkil {
     background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)), /* Black to transparent gradient */
                       url("../../img/vakkil.png"); /* Background image */
+}
+.devi.arunj {
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)), /* Black to transparent gradient */
+                      url("../../img/arunj.png"); /* Background image */
 }
 
 .devi:hover {
