@@ -6,7 +6,8 @@ font-size: 68px;
 font-style: normal;
 font-weight: 500;
 line-height: normal;
-margin-bottom: 0;
+margin: 0;
+padding-top: 200px;
 }
 .teamhd h3{
     color: var(--WHITISH, #EFFFFB);
