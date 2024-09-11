@@ -91,15 +91,15 @@ const Form = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Validate input fields
-    const locationDateTimeRegex =
-      /^.+ \| \d{1,2} [a-zA-Z]{3} \| \d{1,2}\.\d{2}(am|pm)$/;
-    if (!locationDateTimeRegex.test(locationDateTime)) {
-      setError(
-        "Location | Date | Time must be in the format: EAB 415 | 2 oct | 10.00am"
-      );
-      return;
-    }
+    // // Validate input fields
+    // const locationDateTimeRegex =
+    //   /^.+ \| \d{1,2} [a-zA-Z]{3} \| \d{1,2}\.\d{2}(am|pm)$/;
+    // if (!locationDateTimeRegex.test(locationDateTime)) {
+    //   setError(
+    //     "Location | Date | Time must be in the format: EAB 415 | 2 oct | 10.00am"
+    //   );
+    //   return;
+    // }
 
     // Check if the poster URL is available
     if (!posterURL) {
