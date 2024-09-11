@@ -37,6 +37,11 @@ function Teams() {
                     <div className="devit"><h3>Arun John</h3>
                     <p>Backend Dev</p></div>
                 </div>
+                <div className="devi christu">
+                    <div className="sidevara"></div>
+                    <div className="devit"><h3>Christopher J Neelankavil</h3>
+                    <p>Backend Dev</p></div>
+                </div>
             </div>
         <Footer/>
     </div>

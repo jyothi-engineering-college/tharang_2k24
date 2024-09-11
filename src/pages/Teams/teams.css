@@ -64,6 +64,10 @@ margin-top: 0;
     background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)), /* Black to transparent gradient */
                       url("../../img/arunj.png"); /* Background image */
 }
+.devi.christu {
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)), /* Black to transparent gradient */
+                      url("../../img/christu.png"); /* Background image */
+}
 
 .devi:hover {
     filter: grayscale(0%); /* Remove grayscale on hover */
