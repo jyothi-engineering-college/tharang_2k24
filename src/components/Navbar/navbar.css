@@ -1,34 +1,49 @@
+/* General Styles */
 .navb {
     display: flex;
-    justify-content: space-between; /* Distributes space between items */
-    align-items: center; /* Vertically centers items */
+    justify-content: space-between;
+    align-items: center;
     padding: 17px;
     width: 95%;
-    margin: 0 auto; /* Centers the navbar horizontally */
+    margin: 0 auto;
     border-radius: 13px;
     border: 0.5px solid var(--WHITISH, #EFFFFB);
     background: rgba(76, 76, 76, 0.25);
     backdrop-filter: blur(9.05px);
-    position: fixed; /* Ensures the navbar is fixed at the top */
+    position: fixed;
     top: 0;
-    left: 50%; /* Centers the navbar horizontally */
-    transform: translateX(-50%); /* Corrects the offset caused by left: 50% */
-    z-index: 1;
-    transition: top 0.3s; /* Smooth transition for hiding/showing */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000; /* Ensures navbar is on top */
+    transition: top 0.3s;
 }
 
 .navb.hidden {
     top: -100px; /* Moves navbar out of the viewport */
 }
 
-
 .navb img {
     width: 106px;
     height: 94px;
 }
 
+/* Menu Toggle Button for Smaller Screens */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 3px 0;
+}
+
+/* Menu Container Styles */
 .ruter {
-    display: inline-flex;
+    display: flex;
     align-items: center;
     gap: 22px;
 }
@@ -48,7 +63,7 @@
 }
 
 .hlog {
-    display: inline-flex;
+    display: flex;
     align-items: center;
     gap: 22px;
 }
@@ -71,4 +86,68 @@
     width: 2px;
     height: 31px;
     background: #4F98CA;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .navb {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 10px;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .ruter {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+        display: none; /* Initially hide the menu */
+        width: 100%;
+    }
+
+    .navb.open .ruter {
+        display: flex; /* Show menu when navbar has the "open" class */
+    }
+
+    .rutl {
+        font-size: 24px;
+        margin: 5px 0;
+    }
+
+    .hlog {
+        display: none; /* Hide login initially */
+    }
+
+    .navb.open .hlog {
+        display: flex; /* Show login when navbar is open */
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .hlog img {
+        width: 35px;
+        height: 35px;
+    }
+
+    .hlog p {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navb {
+        padding: 8px;
+    }
+
+    .rutl {
+        font-size: 18px;
+    }
+
+    .hlog p {
+        font-size: 18px;
+    }
 }

@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom';
 function Navbar() {
   const [isHidden, setIsHidden] = useState(false);
   const [lastScrollTop, setLastScrollTop] = useState(0);
+  const [isOpen, setIsOpen] = useState(false); // State to handle the dropdown menu
 
   const handleScrollToSection = (id) => {
     const element = document.getElementById(id);
@@ -32,18 +33,26 @@ function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [lastScrollTop]);
 
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
-    <div className='navb'>
+    <div className={`navb ${isHidden ? 'hidden' : ''} ${isOpen ? 'open' : ''}`}>
       <img src={Tharangam} alt="TharangLogo" />
+      
+      {/* Hamburger menu toggle button */}
+      <div className="menu-toggle" onClick={toggleMenu}>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      
       <div className="ruter">
         <Link className="rutl" to="/">
           Home
         </Link>
-        <Link
-          className="rutl"
-          to="/"
-          onClick={() => handleScrollToSection("abtt")}
-        >
+        <Link className="rutl" to="/" onClick={() => handleScrollToSection("abtt")}>
           About
         </Link>
         <Link className="rutl" to="/events">
@@ -55,14 +64,13 @@ function Navbar() {
         <Link className="rutl" to="/team">
           Team
         </Link>
-      </div>
-      <Link className="rutl" to="/login">
+        {/* Login inside the dropdown menu */}
         <div className="hlog">
           <img src={UserLog} alt="userlogin" />
           <p>Login</p>
           <div className="nervara"></div>
         </div>
-      </Link>
+      </div>
     </div>
   );
 }
