@@ -194,6 +194,15 @@ const Form = () => {
           onChange={(e) => setDescription(e.target.value)}
           required
         ></textarea>
+        <p>Contact</p>
+        <input
+          className="submitselect"
+          type="number"
+          placeholder="Contact no"
+          value={contact}
+          onChange={(e) => setContact(e.target.value)}
+          required
+        />
         <p>Poster Image</p>
 <input
   className="submitselect"
