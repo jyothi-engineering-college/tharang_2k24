@@ -62,5 +62,15 @@ padding: 20px;
         width: 100%;
         background-size: cover;
     }
+    .hdet h3
+    {
+       font-size: 58px;
+       word-break: break-all; 
+    }
+    .hdet p
+    {
+        font-size: 58px;
+        word-break: break-all;
+    }
 
   }
