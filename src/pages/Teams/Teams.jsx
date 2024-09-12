@@ -29,12 +29,17 @@ function Teams() {
                 </div>
                 <div className="devi abidd">
                     <div className="sidevara"></div>
-                    <div className="devit"><h3>Abid Ahhamad</h3>
+                    <div className="devit"><h3>Abid Ahammed S H</h3>
                     <p>Frontend Dev</p></div>
                 </div>
                 <div className="devi arunj">
                     <div className="sidevara"></div>
                     <div className="devit"><h3>Arun John</h3>
+                    <p>Backend Dev</p></div>
+                </div>
+                <div className="devi christu">
+                    <div className="sidevara"></div>
+                    <div className="devit"><h3>Christopher J Neelankavil</h3>
                     <p>Backend Dev</p></div>
                 </div>
             </div>

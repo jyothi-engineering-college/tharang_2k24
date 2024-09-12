@@ -28,6 +28,7 @@ const Form = () => {
   const [description, setDescription] = useState("");
   const [poster, setPoster] = useState(null); // For storing selected poster
   const [posterURL, setPosterURL] = useState(""); // URL to store in the database
+  // const [fileError, setFileError] = useState("");
   const [googleFormLink, setGoogleFormLink] = useState("");
   const [contact, setContact] = useState("");
   const [error, setError] = useState("");
@@ -45,10 +46,31 @@ const Form = () => {
   // Handle file input change
   const handleFileChange = async (e) => {
     const file = e.target.files[0];
-    if (file && file.size < 1 * 1024 * 1024) { // Check if the file is less than 1MB
-      setPoster(file);
+  
+    if (!file) {
+      setError("Please select a file.");
+      return;
+    }
+  
+    // Check if the file is less than 1MB
+    if (file.size > 1 * 1024 * 1024) {
+      setError("File size must be less than 1 MB.");
+      return;
+    }
+  
+    // Check if the image is in 1:1 ratio
+    const img = new Image();
+    img.src = URL.createObjectURL(file);
+    img.onload = async () => {
+      if (img.width !== img.height) {
+        setError("Image must be in 1:1 ratio.");
+        return;
+      }
+  
+      // Clear error and set the poster file
       setError("");
-
+      setPoster(file);
+  
       // Upload the file to Firebase Storage
       const storageRef = ref(storage, `posters/${file.name}`);
       try {
@@ -58,23 +80,26 @@ const Form = () => {
       } catch (uploadError) {
         setError("Failed to upload poster image.");
       }
-    } else {
-      setError("File size must be less than 1 MB.");
-    }
+    };
+  
+    img.onerror = () => {
+      setError("Invalid image file.");
+    };
   };
+  
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Validate input fields
-    const locationDateTimeRegex =
-      /^.+ \| \d{1,2} [a-zA-Z]{3} \| \d{1,2}\.\d{2}(am|pm)$/;
-    if (!locationDateTimeRegex.test(locationDateTime)) {
-      setError(
-        "Location | Date | Time must be in the format: EAB 415 | 2 oct | 10.00am"
-      );
-      return;
-    }
+    // // Validate input fields
+    // const locationDateTimeRegex =
+    //   /^.+ \| \d{1,2} [a-zA-Z]{3} \| \d{1,2}\.\d{2}(am|pm)$/;
+    // if (!locationDateTimeRegex.test(locationDateTime)) {
+    //   setError(
+    //     "Location | Date | Time must be in the format: EAB 415 | 2 oct | 10.00am"
+    //   );
+    //   return;
+    // }
 
     // Check if the poster URL is available
     if (!posterURL) {
@@ -169,22 +194,32 @@ const Form = () => {
           onChange={(e) => setDescription(e.target.value)}
           required
         ></textarea>
-        <p>Poster Image</p>
+        <p>Contact</p>
         <input
           className="submitselect"
-          type="file"
-          accept="image/*"
-          onChange={handleFileChange}
+          type="number"
+          placeholder="Contact no"
+          value={contact}
+          onChange={(e) => setContact(e.target.value)}
           required
         />
-        {posterURL && (
-          <p>
-            Poster uploaded successfully! <br />
-            <a href={posterURL} target="_blank" rel="noopener noreferrer">
-              View Poster
-            </a>
-          </p>
-        )}
+        <p>Poster Image</p>
+<input
+  className="submitselect"
+  type="file"
+  accept="image/*"
+  onChange={handleFileChange}
+  required
+/>
+{error && <h3 className="submitspec" style={{ color: "red" }}>{error}</h3>}
+{posterURL && (
+  <p>
+    Poster uploaded successfully! <br />
+    <a href={posterURL} target="_blank" rel="noopener noreferrer">
+      View Poster
+    </a>
+  </p>
+)}
         <p>Google Form Link</p>
         <input
           className="submitselect"

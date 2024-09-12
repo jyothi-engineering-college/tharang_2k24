@@ -71,3 +71,17 @@
     height: 31px;
     background: #4F98CA;
 }
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    .ruter{
+        display: none ;
+    }
+    .navb{
+       width: 80%;
+       padding: 0;
+        left: 0;
+        right: -420px;
+    }
+
+    
+  }

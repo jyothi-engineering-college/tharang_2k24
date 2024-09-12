@@ -56,3 +56,21 @@ text-align: center;
 margin: 0;
 padding: 20px;
 }
+
+@media only screen and (max-width: 768px) {
+    .headu{
+        width: 100%;
+        background-size: cover;
+    }
+    .hdet h3
+    {
+       font-size: 58px;
+       word-break: break-all; 
+    }
+    .hdet p
+    {
+        font-size: 58px;
+        word-break: break-all;
+    }
+
+  }
