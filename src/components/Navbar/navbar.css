@@ -1,24 +1,25 @@
+/* Navbar Container */
 .navb {
     display: flex;
-    justify-content: space-between; /* Distributes space between items */
-    align-items: center; /* Vertically centers items */
+    justify-content: space-between;
+    align-items: center;
     padding: 17px;
     width: 95%;
-    margin: 0 auto; /* Centers the navbar horizontally */
+    margin: 0 auto;
     border-radius: 13px;
     border: 0.5px solid var(--WHITISH, #EFFFFB);
     background: rgba(76, 76, 76, 0.25);
     backdrop-filter: blur(9.05px);
-    position: fixed; /* Ensures the navbar is fixed at the top */
+    position: fixed;
     top: 0;
-    left: 50%; /* Centers the navbar horizontally */
-    transform: translateX(-50%); /* Corrects the offset caused by left: 50% */
+    left: 50%;
+    transform: translateX(-50%);
     z-index: 1;
-    transition: top 0.3s; /* Smooth transition for hiding/showing */
+    transition: top 0.3s;
 }
 
 .navb.hidden {
-    top: -100px; /* Moves navbar out of the viewport */
+    top: -100px;
 }
 
 .navb img {
@@ -26,8 +27,16 @@
     height: 94px;
 }
 
+.nav-content {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    width: 100%;
+    justify-content: space-between;
+}
+
 .ruter {
-    display: inline-flex;
+    display: flex;
     align-items: center;
     gap: 22px;
 }
@@ -36,18 +45,15 @@
     color: #FFF;
     font-family: "Gemunu Libre";
     font-size: 32px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
     text-decoration: none;
 }
 
-.ruter Link:hover {
+.ruter .rutl:hover {
     color: #FFD700;
 }
 
 .hlog {
-    display: inline-flex;
+    display: flex;
     align-items: center;
     gap: 22px;
 }
@@ -61,9 +67,6 @@
     color: var(--WHITISH, #EFFFFB);
     font-family: "Gemunu Libre";
     font-size: 32px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
 }
 
 .nervara {
@@ -71,14 +74,74 @@
     height: 31px;
     background: #4F98CA;
 }
-@media only screen and (max-width: 768px) {
-    /* For mobile phones: */
-    .ruter{
-        display: none ;
-    }
-    .navb{
-       width: 80%;
-    }
 
-    
-  }
+/* Hamburger Menu */
+.hamburger-menu {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #FFF; /* White color */
+}
+
+/* Mobile Menu */
+.mobile-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: rgba(76, 76, 76, 0.9);
+    padding: 10px 0;
+}
+
+.mobile-menu .rutl {
+    padding: 10px;
+    text-align: center;
+}
+
+.mobile-menu .login-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+/* Media Query for Mobile */
+@media only screen and (max-width: 768px) {
+    .ruter {
+        display: none;
+    }
+    .hlog{
+  display: none;
+    }
+  
+.hlogphone {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+.hlogphone img {
+    width: 47px;
+    height: 47px;
+}
+
+.hlogphone p {
+    color: var(--WHITISH, #EFFFFB);
+    font-family: "Gemunu Libre";
+    font-size: 32px;
+}
+
+    .navb {
+        width: 80%;
+    }
+    .hamburger-menu {
+        display: block;
+        position: absolute;
+        right: 10px; /* Align to the left */
+    }
+    .mobile-menu {
+        display: flex;
+    }
+}
