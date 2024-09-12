@@ -252,3 +252,55 @@ margin: 0;
     display: block;
     padding-right: 75px;  
 }
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    .bentoup
+    {
+        display: block;
+        
+    }
+    .bento1
+{
+    border-radius: 30px;
+    width: 80%;
+    height: auto;
+    background-image: url("../../img/b1bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 46px;
+    padding-bottom: 30px;
+    margin-left: 68px;
+    margin-bottom: 29px;
+
+}
+
+.bento2
+{
+    border-radius: 30px;
+    width: 80%;
+    height: auto;
+    background-image: url("../../img/b2bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 35px;
+    padding-bottom: 13px;
+    margin-left: 68px;
+    margin-bottom: 29px;
+}
+
+.bento3
+{
+    display: block;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 75px;
+    margin-right: 75px;
+    padding-top: 42px;
+    padding-bottom: 42px;
+    margin-bottom: 20px;
+    background: #393939;
+    border-radius: 30px;
+}
+    
+}

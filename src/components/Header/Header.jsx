@@ -12,8 +12,11 @@ function Header() {
         <p>Let's Get</p>
         <h3>Tharangified !</h3>
         </div>
+        <div className="collada">
         <ThreeDModel/>
         </div>
+        </div>
+        
         {/* <h3 className='tit animate__animated animate__fadeInUp'>This is Tharang 2024 !</h3> */}
         <Countdown/>
     </div>

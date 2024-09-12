@@ -72,5 +72,8 @@ padding: 20px;
         font-size: 58px;
         word-break: break-all;
     }
+    .collada{
+        display: none;
+    }
 
   }

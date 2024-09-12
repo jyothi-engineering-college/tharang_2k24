@@ -45,3 +45,14 @@ margin: 2px;
     width: 35%;
     height: 35%;
 }
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+   .abdet{
+    display: block;
+   }
+   .abdet img{
+     margin-left: 30%;
+   }
+    
+}
