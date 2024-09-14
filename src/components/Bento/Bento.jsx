@@ -60,7 +60,7 @@ function Bento() {
         <div onClick={handleViewDetails} className="bento2">
           <div className="b2head">
             <p>Event of the time</p>
-            <img src={ArrowUp} alt="arrow" />
+            {/* <img src={ArrowUp} alt="arrow" /> */}
           </div>
           {eventsingle && (
             <div className="bevent">

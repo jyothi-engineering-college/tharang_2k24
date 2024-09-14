@@ -1,0 +1,23 @@
+.colllam {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    width: 70%;
+    height: 70%;
+    position: absolute;
+    top: 60%;
+    left: 60%;
+    transform: translate(-50%, -50%); /* Perfect centering */
+    overflow: hidden;
+}
+
+@media only screen and (max-width: 768px) {
+    .colllam {
+        width: 90%; /* More space for smaller screens */
+        height: 90%; 
+        top: 70%; /* Vertically centered */
+        left: 50%; /* Horizontally centered */
+        transform: translate(-50%, -50%); /* Maintain perfect centering */
+        overflow: hidden;
+    }
+}

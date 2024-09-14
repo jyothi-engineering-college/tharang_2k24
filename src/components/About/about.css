@@ -52,7 +52,26 @@ margin: 2px;
     display: block;
    }
    .abdet img{
-     margin-left: 30%;
+     display: none;
+   }
+   .abh h3
+   {
+    color: var(--WHITISH, #EFFFFB);
+font-family: "Gemunu Libre";
+font-size: 48px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+margin-bottom: 20px;
+   }
+   .abdet p
+   {
+    color: var(--WHITISH, #EFFFFB);
+font-family: "Gemunu Libre";
+font-size: 18px;
+font-style: normal;
+font-weight: 300;
+line-height: normal;        
    }
     
 }

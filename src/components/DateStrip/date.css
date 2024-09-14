@@ -35,3 +35,15 @@ padding-bottom: 20px;
 {
     z-index: 0;
 }
+@media only screen and (max-width: 768px) {
+    .wstrip h3{
+        font-size: 64px;
+        padding-top: 12px;
+padding-bottom: 12px;
+    }
+    .nstrip h3{
+        font-size: 64px;
+        padding-top: 12px;
+padding-bottom: 12px;
+    }
+}
