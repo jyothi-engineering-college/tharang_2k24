@@ -19,7 +19,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/team" element={<Teams />} />
           <Route path="/events" element={<Events />} />
-          <Route path="/event-details" element={<EventDetails />} />
+          <Route path="/event/:slug" element={<EventDetails />} /> {/* Dynamic route */}
           <Route path="/sponsor" element={<Sponsor />} />
           <Route path="/login" element={<Login />} />
           <Route path="/form" element={<Form />} />
