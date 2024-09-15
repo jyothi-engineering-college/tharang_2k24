@@ -1,6 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { supabase } from "../../Supabaseconffig";
+import './eventdetails.css';
+import Navbar from "../../components/Navbar/Navbar";
+import Footer from "../../components/Footer/Footer";
+import locSvg from "../../img/locsvg.svg";
+import timeSvg from "../../img/closvg.svg";
+import dateSvg from "../../img/calsvg.svg";
+import phoneSvg from "../../img/phosvg.svg";
 
 const EventDetails = () => {
   const { id } = useParams(); // Get the id from the URL (corrected from eventId to id)
@@ -22,6 +29,19 @@ const EventDetails = () => {
     }
     setLoading(false);
   };
+  const shareEventLink = () => {
+    if (navigator.share) {
+      navigator.share({
+        title: document.title, // Use the current document title
+        url: window.location.href, // Share the current URL
+      })
+      .then(() => console.log('Successfully shared'))
+      .catch((error) => console.error('Error sharing:', error));
+    } else {
+      alert('Sharing is not supported on this device.');
+    }
+  };
+  
 
   useEffect(() => {
     fetchEventDetails();
@@ -36,29 +56,48 @@ const EventDetails = () => {
   }
 
   return (
-    <div>
-      <h1>{eventData.event_name}</h1>
-      <img
-        src={eventData.poster_url}
-        alt="Event"
-        style={{ width: "300px", height: "auto" }}
-      />
-      <p>
-        <strong>Location | Date | Time:</strong> {eventData.loc_dt_tm}
+    <div className="eventmotham">
+      <Navbar />
+      <div className="tideim">
+        <div className="evndep">
+          <h3>{eventData.event_name}</h3>
+          <p>Dept of {eventData.department}</p>
+        </div>
+        <img src={eventData.poster_url} alt="poster" />
+      </div>
+      <p className="evdetdesc">
+        {eventData.description}
       </p>
-      <p>
-        <strong>Description:</strong> {eventData.description}
-      </p>
-      <p>
-        <strong>Contact:</strong> {eventData.contact}
-      </p>
-      <a
+      <div className="eventmain">
+        <p><img src={locSvg}/> {eventData.location}</p>
+        <p><img src={timeSvg}/> {eventData.time}</p>
+        <p><img src={dateSvg}/> {eventData.date}</p>
+        <p><img src={phoneSvg}/> {eventData.contact}</p>
+      </div>
+      <div className="registevent">
+      <button className="vellayalla" onClick={shareEventLink}>
+  Share Event Link
+</button>
+
+
+<a
+  className="vellakkaran"
+  href={eventData.registerlink}
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  Register Now!
+</a>
+
+      </div>
+      {/* <a
         href={eventData.registerlink}
         target="_blank"
         rel="noopener noreferrer"
       >
         Register Here
-      </a>
+      </a> */}
+      <Footer/>
     </div>
   );
 };

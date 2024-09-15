@@ -25,6 +25,9 @@ const Form = () => {
   const [deptName, setDeptName] = useState("");
   const [eventName, setEventName] = useState("");
   const [locationDateTime, setLocationDateTime] = useState("");
+  const [eveLocation, setEveLocation] = useState("");
+  const [eveDate, setEveDate] = useState("");
+  const [eveTime, setEveTime] = useState("");
   const [description, setDescription] = useState("");
   const [poster, setPoster] = useState(null); // For storing selected poster
   const [posterURL, setPosterURL] = useState(""); // URL to store in the database
@@ -119,7 +122,10 @@ const Form = () => {
       {
         department: deptName,
         event_name: eventName,
-        loc_dt_tm: locationDateTime,
+        // loc_dt_tm: locationDateTime,
+        location: eveLocation,
+        date : eveDate,
+        time : eveTime,
         description: description,
         poster_url: posterURL, // Use the Firebase Storage URL
         registerlink: googleFormLink,
@@ -132,6 +138,7 @@ const Form = () => {
       setError(supabaseError.message);
     } else {
       setSuccess("Event saved successfully!");
+      alert("Event saved successfully!");
       setError("");
     }
   };
@@ -184,16 +191,34 @@ const Form = () => {
           onChange={(e) => setEventName(e.target.value)}
           required
         />
-        <p>Location | Date | Time</p>
+        <p>Location</p>
         <input
           className="submitselect"
           type="text"
-          value={locationDateTime}
-          onChange={(e) => setLocationDateTime(e.target.value)}
-          placeholder="Location | yyyy-mm-dd | hh:mm"
+          value={eveLocation}
+          onChange={(e) => setEveLocation(e.target.value)}
+          placeholder="Location"
           required
         />
-        <h3 className="submitspec">NB: format: EAB 415 | 2 oct | 10.00am</h3>
+        <p>Date</p>
+        <input
+          className="submitselect"
+          type="text"
+          value={eveDate}
+          onChange={(e) => setEveDate(e.target.value)}
+          placeholder="Date"
+          required
+        />
+        <p>Time</p>
+        <input
+          className="submitselect"
+          type="text"
+          value={eveTime}
+          onChange={(e) => setEveTime(e.target.value)}
+          placeholder="Time"
+          required
+        />
+        {/* <h3 className="submitspec">NB: format: EAB 415 | 2 oct | 10.00am</h3> */}
         <p>Description</p>
         <textarea
           className="submitselect"
