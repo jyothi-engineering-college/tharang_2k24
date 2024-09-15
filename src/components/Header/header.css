@@ -73,7 +73,12 @@ padding: 20px;
         word-break: break-all;
     }
     .collada{
-        display: none;
+        display: block;
+        /* width: 100px;
+        height: 100px; */
     }
-
+    .hall{
+        display: block;
+        padding-top: 150px;
+    }
   }

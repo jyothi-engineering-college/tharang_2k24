@@ -148,6 +148,7 @@ font-style: normal;
 font-weight: 600;
 line-height: normal;
 margin: 0;
+margin-bottom: 20px;
 }
 .b2head img{
     object-fit: contain;
@@ -258,6 +259,10 @@ margin: 0;
     .bentoup
     {
         display: block;
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+        /* padding-left: 0; */
         
     }
     .bento1
@@ -270,8 +275,34 @@ margin: 0;
     background-size: cover;
     padding-top: 46px;
     padding-bottom: 30px;
-    margin-left: 68px;
+    margin-left: 10%;
     margin-bottom: 29px;
+
+}
+.bhead p
+{
+    display: none;
+}
+.bdesc{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    padding-left: 27px;
+    padding-right: 27px;
+}
+.bdesc p
+{
+    color: #FFF;
+font-family: "Gemunu Libre";
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+width: 100%;
 
 }
 
@@ -285,8 +316,16 @@ margin: 0;
     background-size: cover;
     padding-top: 35px;
     padding-bottom: 13px;
-    margin-left: 68px;
+    margin-left: 10%;
     margin-bottom: 29px;
+}
+.bevent
+{
+    flex-direction: column;
+    padding-left: 0;
+}
+.bedet{
+    align-items: center;
 }
 
 .bento3
@@ -294,13 +333,43 @@ margin: 0;
     display: block;
     justify-content: space-between;
     align-items: center;
-    margin-left: 75px;
-    margin-right: 75px;
+    margin-left: 40px;
+    margin-right: 40px;
+    padding-left: 30px;
+    padding-right: 30px;
     padding-top: 42px;
     padding-bottom: 42px;
     margin-bottom: 20px;
     background: #393939;
     border-radius: 30px;
+    
+}
+.bento3 img
+{
+    padding-left: 40px;
+    padding-right: 40px;
+    max-width: 198px;
+    max-height: 50px;
+    object-fit: contain;
+}
+.b3det p
+{
+    color: var(--WHITISH, #EFFFFB);
+font-family: "Gemunu Libre";
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+letter-spacing: 1.2px;
+}
+.b3det h3
+{
+    color: var(--WHITISH, #EFFFFB);
+font-family: "Gemunu Libre";
+font-size: 32px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
 }
     
 }

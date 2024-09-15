@@ -72,8 +72,8 @@ line-height: normal;
 /* Adjusted class */
 .econtainer {
   position: relative;
-  width: 400px; /* Fixed width */
-  height: 400px; /* Fixed height */
+  width: 360px; /* Fixed width */
+  height: 360px; /* Fixed height */
   overflow: hidden;
   border-radius: 19px; /* Ensures the zoomed image doesn't overflow */
 }
@@ -151,4 +151,81 @@ line-height: normal;
   background-image: url("../../img/spbg.png");
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+@media only screen and (max-width:768px) {
+
+  .evhd{
+    color: var(--WHITISH, #EFFFFB);
+text-align: center;
+font-family: "Gemunu Libre";
+font-size: 52px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+  }
+  .navEvents{
+    display: grid;
+    grid-template-columns: auto auto auto;
+
+  }
+.evegrid{
+  grid-template-columns: auto;
+  padding-left: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 95vw ;
+
+}
+.econtainer{
+  width: 288px;
+  height: 288px;
+  padding-left: 49px;
+  
+}
+.econtainer:hover .codooo {
+  transform: scale(1);
+ 
+}
+.eoverlay h3 {
+  color: var(--WHITISH, #EFFFFB);
+  font-family: "Gemunu Libre";
+  font-size: 48px;
+  font-style: normal;
+  word-wrap: 5px;
+  width: 70%;
+  font-weight: 700;
+  letter-spacing: 0.1px;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.eoverlay p {
+  color: var(--WHITISH, #EFFFFB);
+  font-family: "Gemunu Libre";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 20px; /* 100% */
+  letter-spacing: 0.1px;
+}
+.eoverlay {
+  width: 100%;
+  height: auto; /* Let height be determined by the aspect ratio */
+  /* aspect-ratio: 1/1; Maintains a 1:1 ratio */
+  position: relative; /* Adjusted for better mobile handling */
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  background: linear-gradient(
+    0deg, 
+    rgba(0, 0, 0, 1) 0%, 
+    rgba(0, 0, 0, 0) 100%
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 10px; /* Adjust padding for mobile */
+  text-align: left;
+}
+
 }

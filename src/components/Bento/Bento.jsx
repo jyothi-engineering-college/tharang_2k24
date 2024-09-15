@@ -30,9 +30,11 @@ function Bento() {
 
   const handleViewDetails = () => {
     if (eventsingle) {
-      navigate("/event-details", { state: { event: eventsingle } });
+      const eventId = eventsingle.id; // Get the event's id
+      navigate(`/event-details/${eventId}`, { state: { event: eventsingle } }); // Navigate using the event's id
     }
   };
+  
 
   return (
     <div>
@@ -60,7 +62,7 @@ function Bento() {
         <div onClick={handleViewDetails} className="bento2">
           <div className="b2head">
             <p>Event of the time</p>
-            <img src={ArrowUp} alt="arrow" />
+            {/* <img src={ArrowUp} alt="arrow" /> */}
           </div>
           {eventsingle && (
             <div className="bevent">

@@ -1,7 +1,6 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { supabase } from "../../Supabaseconffig";
-import { useEffect, useState } from "react";
 
 function EventInd({ sendDeptChild }) {
   const [deptData, setDeptData] = useState([]);
@@ -25,8 +24,8 @@ function EventInd({ sendDeptChild }) {
   }, [sendDeptChild]);
 
   const handleClick = (event) => {
-    // Navigate to the details page with the event data
-    navigate("/event-details", { state: { event } });
+    const eventId = event.id; // Use event_id instead of slug
+    navigate(`/event-details/${eventId}`, { state: { event } }); // Navigate to the details page using event_id
   };
 
   return (
