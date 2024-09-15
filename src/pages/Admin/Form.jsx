@@ -33,6 +33,8 @@ const Form = () => {
   const [contact, setContact] = useState("");
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
+  const [uploading, setUploading] = useState(false);
+
   const navigate = useNavigate();
 
   // Check if the user is authenticated
@@ -70,15 +72,20 @@ const Form = () => {
       // Clear error and set the poster file
       setError("");
       setPoster(file);
+
+       // Start uploading process
+    setUploading(true);
   
       // Upload the file to Firebase Storage
       const storageRef = ref(storage, `posters/${file.name}`);
       try {
         await uploadBytes(storageRef, file);
         const downloadURL = await getDownloadURL(storageRef);
-        setPosterURL(downloadURL); // Set the download URL for database storage
+        setPosterURL(downloadURL); 
+        setUploading(false);// Set the download URL for database storage
       } catch (uploadError) {
         setError("Failed to upload poster image.");
+        setUploading(false);
       }
     };
   
@@ -211,6 +218,7 @@ const Form = () => {
   onChange={handleFileChange}
   required
 />
+{uploading && <p className="submitspec">Uploading poster, please wait...</p>}
 {error && <h3 className="submitspec" style={{ color: "red" }}>{error}</h3>}
 {posterURL && (
   <p>

@@ -30,9 +30,11 @@ function Bento() {
 
   const handleViewDetails = () => {
     if (eventsingle) {
-      navigate("/event-details", { state: { event: eventsingle } });
+      const eventId = eventsingle.id; // Get the event's id
+      navigate(`/event-details/${eventId}`, { state: { event: eventsingle } }); // Navigate using the event's id
     }
   };
+  
 
   return (
     <div>

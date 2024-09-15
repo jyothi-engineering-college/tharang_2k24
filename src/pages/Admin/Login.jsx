@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { supabase } from "../../Supabaseconffig";
+import { PropagateLoader } from "react-spinners";
 // import 'bulma/css/bulma.css';
 import './login.css';
 import Jyolog from "../../img/jyosmall.png";
@@ -9,10 +10,12 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState(null);
+  const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
   const handleLogin = async (e) => {
     e.preventDefault();
+    setLoading(true);
     const { data, error } = await supabase.auth.signInWithPassword({
       email,
       password,
@@ -25,6 +28,7 @@ const Login = () => {
       localStorage.setItem("userSession", JSON.stringify(data.session));
       navigate("/form");
     }
+    setLoading(false); 
   };
 
   useEffect(() => {
@@ -44,7 +48,7 @@ const Login = () => {
     </div>
     <div className="logmn">
       <p>Login to Admin</p>
-      <input type="text"
+      <input type="email"
         
         placeholder="Email"
         value={email}
@@ -57,6 +61,12 @@ const Login = () => {
         required />
       <button onClick={handleLogin}>Login</button>
     </div>
+     {/* Show overlay with spinner when loading */}
+     {loading && (
+        <div className="overlay">
+          <PropagateLoader color="#ffffff" /> {/* Whitish spinner */}
+        </div>
+      )}
     {/* <form onSubmit={handleLogin}>
       <input
         type="text"
