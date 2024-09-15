@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { supabase } from "../../Supabaseconffig";
-import { slugify } from "../../utils/Utils"; // We'll create this utility function
 
 function EventInd({ sendDeptChild }) {
   const [deptData, setDeptData] = useState([]);
@@ -25,8 +24,8 @@ function EventInd({ sendDeptChild }) {
   }, [sendDeptChild]);
 
   const handleClick = (event) => {
-    const slug = slugify(event.event_name); // Generate slug for the event name
-    navigate(`/event/${slug}`, { state: { event } }); // Use dynamic URL based on event name
+    const eventId = event.id; // Use event_id instead of slug
+    navigate(`/event-details/${eventId}`, { state: { event } }); // Navigate to the details page using event_id
   };
 
   return (

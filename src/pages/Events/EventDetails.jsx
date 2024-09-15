@@ -3,30 +3,29 @@ import { useParams } from "react-router-dom";
 import { supabase } from "../../Supabaseconffig";
 
 const EventDetails = () => {
-  const { slug } = useParams(); // Get the slug from the URL
+  const { id } = useParams(); // Get the id from the URL (corrected from eventId to id)
   const [eventData, setEventData] = useState(null);
   const [loading, setLoading] = useState(true);
 
   const fetchEventDetails = async () => {
-    // Fetch the event from the database using a case-insensitive query
     const { data, error } = await supabase
       .from("events")
       .select("*")
-      .ilike("event_name", `%${slug.replace(/-/g, " ")}%`); // Case-insensitive match
+      .eq("id", id); // Query by the event id
 
     if (error) {
       console.error("Error fetching event details:", error);
+    } else if (data.length > 0) {
+      setEventData(data[0]); // Use the first matching event
     } else {
-      setEventData(data[0]); // Assume the first match is correct
+      console.log("No event found with the provided id.");
     }
     setLoading(false);
   };
 
   useEffect(() => {
-    if (!eventData) {
-      fetchEventDetails(); // Fetch the data if eventData is not available
-    }
-  }, [slug]);
+    fetchEventDetails();
+  }, [id]);
 
   if (loading) {
     return <p>Loading event details...</p>;
