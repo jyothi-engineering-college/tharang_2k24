@@ -51,9 +51,12 @@ function Navbar() {
           <Link className="rutl" to="/events">
             Events
           </Link>
-          <Link className="rutl" to="/sponsor">
+          {/* <Link className="rutl" to="/sponsor">
             Sponsor
-          </Link>
+          </Link> */}
+          <Link className="rutl" to="https://tharang2024news.wordpress.com/">
+            News
+            </Link>
           <Link className="rutl" to="/team">
             Team
           </Link>
