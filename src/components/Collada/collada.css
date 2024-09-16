@@ -13,11 +13,12 @@
 
 @media only screen and (max-width: 768px) {
     .colllam {
-        width: 90%; /* More space for smaller screens */
-        height: 90%; 
-        top: 70%; /* Vertically centered */
-        left: 50%; /* Horizontally centered */
-        transform: translate(-50%, -50%); /* Maintain perfect centering */
-        overflow: hidden;
+      width: 90vw; /* Responsive width based on the viewport */
+      height: 90vw; /* Maintain 1:1 aspect ratio */
+      position: absolute; /* Needed for centering */
+      top: 60%; /* Vertically centered */
+      left: 50%; /* Horizontally centered */
+      transform: translate(-50%, -50%); /* Maintain perfect centering */
+      overflow: hidden; /* Hide any overflow content */
     }
-}
+  }

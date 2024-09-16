@@ -121,3 +121,31 @@ margin-bottom: 30px;
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+@media only screen and (max-width:768px)
+{
+    .teamhd p
+    {
+        font-size: 48px;
+    }
+    .teamhd h3
+    {
+        font-size: 58px;
+    }
+    .devpad
+    {
+        grid-template-columns: auto;
+    }
+    .devi{
+        width: 310px;
+        height: 398px;
+    }
+    .devit h3
+    {
+        font-size: 32px;
+    }
+    .devit p
+    {
+        font-size: 20px;
+    }
+}

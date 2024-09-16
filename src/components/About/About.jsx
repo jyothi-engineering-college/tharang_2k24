@@ -25,7 +25,7 @@ function About() {
         </div>
         <div className="abdet">
           <p>
-            Tharang is the largest Techno Cultural Fest conducted annually by the students of Jyothi Engineering College, Thrissur. Tharang, since its inception, has evolved into one of the biggest events for tech-wits and creative minds across the state. The new edition "Tharang 2023" is not different either. The fest brings together the latest in technology, automobiles, workshops, games, arts, dance, and music, all inside a jam-packed session of two days, March 31st and April 1st.
+            Tharang is the largest Techno Cultural Fest conducted annually by the students of Jyothi Engineering College, Thrissur. Tharang, since its inception, has evolved into one of the biggest events for tech-wits and creative minds across the state. The new edition "Tharang 2024" is not different either. The fest brings together the latest in technology, automobiles, workshops, games, arts, dance, and music, all inside a jam-packed session of two days, October 1 and 2.
             <br />
             Jyothi Engineering College (JEC), set up in 2002 under the aegis of Thrissur Educational Trust, founded by the Catholic Archdiocese of Trichur, is a leading engineering college in Kerala. The Archdiocese of Trichur has an illustrious track record of a century and a quarter in the education sector. Jyothi Engineering College is a NAAC accredited institution, and five of the undergraduate programs offered have NBA accreditation, which indicates our recognition for the quality of education we provide.
           </p>

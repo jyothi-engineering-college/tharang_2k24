@@ -84,3 +84,38 @@ line-height: normal;
     background-repeat: no-repeat;
     background-size: cover;
 }
+@media only screen and (max-width:768px)
+{
+    .sphd
+    {
+        flex-direction: column;
+        
+    }
+    .valyah p
+    {
+        font-size: 22px;
+    }
+    .valyah h3
+    {
+        font-size: 52px;
+    }
+    .cheriyah
+    {
+        width: 100%;
+    }
+    .cheriyah p
+    {
+        font-size: 22px;
+    }
+    .sponsind
+    {
+        flex-direction: column;
+        padding-left: 0px;
+    }
+    .sponsind h3
+    {
+        font-size: 32px;
+        margin: 0;
+    }
+
+}

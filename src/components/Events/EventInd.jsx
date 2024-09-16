@@ -37,7 +37,7 @@ function EventInd({ sendDeptChild }) {
               <img className="codooo" src={event.poster_url} alt="Event" />
               <div className="eoverlay">
                 <h3 className="etext">{event.event_name}</h3>
-                <p>{event.loc_dt_tm}</p>
+                <p>{event.location} | {event.date} | {event.time}</p>
               </div>
             </div>
           </div>
