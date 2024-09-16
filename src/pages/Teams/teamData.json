@@ -1,0 +1,72 @@
+[
+    {
+      "name": "Alan Jose Santo",
+      "role": "UI & Development Lead",
+      "imageUrl": "../../img/alanjs.png"
+    },
+    {
+      "name": "Adarsh S",
+      "role": "Frontend Dev",
+      "imageUrl": "../../img/adarsham.png"
+    },
+    {
+      "name": "Abhiram V",
+      "role": "Frontend Dev",
+      "imageUrl": "../../img/vakkil.png"
+    },
+    {
+      "name": "Abid Ahammed S H",
+      "role": "Frontend Dev",
+      "imageUrl": "../../img/thotta.png"
+    },
+    {
+      "name": "Arun John",
+      "role": "Backend Dev",
+      "imageUrl": "../../img/arunj.png"
+    },
+    {
+      "name": "Christopher J Neelankavil",
+      "role": "Backend Dev",
+      "imageUrl": "../../img/christu.png"
+    },
+    {
+      "name": "Gokul P Menon",
+      "role": "Publicity Committee",
+      "imageUrl": "../../img/gokul.jpg"
+    },
+    {
+      "name": "Ajay Joseph Pm",
+      "role": "PRO Show",
+      "imageUrl": "../../img/ajay.jpg"
+    },
+    {
+      "name": "Vismaya Thankam John",
+      "role": "Design and Printing Committee Lead",
+      "imageUrl": "../../img/vismaya.jpg"
+    },
+    {
+      "name": "Mekha Rajagopal",
+      "role": "Technical Committee Student Coordinator",
+      "imageUrl": "../../img/mekha.jpg"
+    },
+    {
+      "name": "Anand Antony",
+      "role": "Proshow",
+      "imageUrl": "../../img/aanand.jpg"
+    },
+    {
+      "name": "Aasad M S",
+      "role": "Refreshment Committee Coordinator",
+      "imageUrl": "../../img/aasad.jpg"
+    },
+    {
+      "name": "Amarnath S",
+      "role": "Finance Committee Student Coordinator",
+      "imageUrl": "../../img/amarnath.jpg"
+    },
+    {
+      "name": "Mohammed Irfan",
+      "role": "TShirt Committee",
+      "imageUrl": "../../img/irfan.jpg"
+    }
+  ]

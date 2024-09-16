@@ -1,151 +1,122 @@
-.teamhd p{
+.teamhd p {
     color: var(--WHITISH, #EFFFFB);
-text-align: center;
-font-family: "Gemunu Libre";
-font-size: 68px;
-font-style: normal;
-font-weight: 500;
-line-height: normal;
-margin: 0;
-padding-top: 200px;
+    text-align: center;
+    font-family: "Gemunu Libre";
+    font-size: 68px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin: 0;
+    padding-top: 200px;
 }
-.teamhd h3{
+
+.teamhd h3 {
     color: var(--WHITISH, #EFFFFB);
-text-align: center;
-font-family: "Gemunu Libre";
-font-size: 100px;
-font-style: normal;
-font-weight: 800;
-line-height: normal;
-margin-top: 0;
+    text-align: center;
+    font-family: "Gemunu Libre";
+    font-size: 100px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    margin-top: 0;
 }
-.devpad
-{
+
+.devpad {
     display: grid;
     grid-template-columns: auto auto auto;
     margin-bottom: 30px;
     padding-left: 50px;
     gap: 50px;
-
 }
+
 .devi {
     width: 328px;
     height: 427px;
     flex-shrink: 0;
     border-radius: 44px;
     position: relative;
-    filter: grayscale(100%); /* Grayscale filter by default */
-    transition: filter 0.5s ease, transform 0.8s ease; /* Smooth transitions for filter and transform */
+    filter: grayscale(100%);
+    transition: filter 0.5s ease, transform 0.8s ease;
     background-repeat: no-repeat;
-    background-size: cover; /* Default background size */
-    background-position: center; /* Center the background image */
-    background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)); /* Default gradient */
+    background-size: cover;
+    background-position: center;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
     margin-bottom: 30px;
 }
 
-.devi.alanjs {
-    background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)), /* Black to transparent gradient */
-                      url("../../img/alanjs.png"); /* Background image */
-}
-
-.devi.adarshs {
-    background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)), /* Black to transparent gradient */
-                      url("../../img/adarsham.png"); /* Background image */
-}
-.devi.abidd {
-    background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)), /* Black to transparent gradient */
-                      url("../../img/thotta.png"); /* Background image */
-}
-.devi.vakkil {
-    background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)), /* Black to transparent gradient */
-                      url("../../img/vakkil.png"); /* Background image */
-}
-.devi.arunj {
-    background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)), /* Black to transparent gradient */
-                      url("../../img/arunj.png"); /* Background image */
-}
-.devi.christu {
-    background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)), /* Black to transparent gradient */
-                      url("../../img/christu.png"); /* Background image */
-}
+.devi.alan { background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)), url("../../img/alanjs.png"); }
+.devi.adarsh { background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)), url("../../img/adarsham.png"); }
+.devi.abhiram { background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)), url("../../img/vakkil.png"); }
+.devi.abid { background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)), url("../../img/thotta.png"); }
+.devi.arun { background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)), url("../../img/arunj.png"); }
+.devi.christopher { background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)), url("../../img/christu.png"); }
+.devi.gokul { background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)), url("../../img/gokul.jpg"); }
+.devi.ajay { background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)), url("../../img/ajay.jpg"); }
+.devi.vismaya { background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)), url("../../img/vismaya.jpg"); }
+.devi.mekha { background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)), url("../../img/mekha.jpg"); }
+.devi.anand { background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)), url("../../img/aanand.jpg"); }
+.devi.aasad { background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)), url("../../img/aasad.jpg"); }
+.devi.amarnath { background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)), url("../../img/amarnath.jpg"); }
+.devi.mohammed { background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)), url("../../img/irfan.jpg"); }
 
 .devi:hover {
-    filter: grayscale(0%); /* Remove grayscale on hover */
-    transform: scale(1.2); /* Smooth zoom effect */
+    filter: grayscale(0%);
+    transform: scale(1.2);
 }
-
 
 .sidevara {
     position: absolute;
     bottom: 0;
     left: 0;
     width: 58px;
-    height: 0px; /* Set a visible height */
+    height: 0px;
     transform: rotate(90deg);
-    background-color: #FFF; /* Use background color to make it visible */
+    background-color: #FFF;
     flex-shrink: 0;
 }
 
-.devit h3{
+.devit h3 {
     color: #FFF;
-text-align: left;
-font-family: "Gemunu Libre";
-font-size: 36px;
-font-style: normal;
-font-weight: 700;
-line-height: normal;
-margin: 0;
-padding-left: 20px;
+    text-align: left;
+    font-family: "Gemunu Libre";
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin: 0;
+    padding-left: 20px;
 }
-.devit p{
+
+.devit p {
     color: #FFF;
-text-align: left;
-font-family: "Gemunu Libre";
-font-size: 20px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-padding-left: 20px;
-margin: 0;
-margin-bottom: 30px;
+    text-align: left;
+    font-family: "Gemunu Libre";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding-left: 20px;
+    margin: 0;
+    margin-bottom: 30px;
 }
-.devit{
+
+.devit {
     position: absolute;
-  bottom: 0;
-  left: 0;
-  
+    bottom: 0;
+    left: 0;
 }
-.teamsall
-{
+
+.teamsall {
     background-image: url("../../img/spbg.png");
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-@media only screen and (max-width:768px)
-{
-    .teamhd p
-    {
-        font-size: 48px;
-    }
-    .teamhd h3
-    {
-        font-size: 58px;
-    }
-    .devpad
-    {
-        grid-template-columns: auto;
-    }
-    .devi{
-        width: 310px;
-        height: 398px;
-    }
-    .devit h3
-    {
-        font-size: 32px;
-    }
-    .devit p
-    {
-        font-size: 20px;
-    }
+@media only screen and (max-width:768px) {
+    .teamhd p { font-size: 48px; }
+    .teamhd h3 { font-size: 58px; }
+    .devpad { grid-template-columns: auto; }
+    .devi { width: 310px; height: 398px; }
+    .devit h3 { font-size: 32px; }
+    .devit p { font-size: 20px; }
 }
