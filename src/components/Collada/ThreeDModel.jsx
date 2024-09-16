@@ -93,6 +93,7 @@ const ThreeDModel = () => {
       const controls = new OrbitControls(camera, renderer.domElement);
       controls.target.set(0, 1.5, 0);
       controls.update();
+      controls.enableZoom = false; // Disable zooming
   
       window.addEventListener('resize', updateAspectRatio);
     };
