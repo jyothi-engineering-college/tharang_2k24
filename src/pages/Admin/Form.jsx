@@ -181,6 +181,7 @@ const Form = () => {
           <option value="ME">ME</option>
           <option value="MR">MR</option>
           <option value="RA">RA</option>
+          <option value="Common">Common</option>
         </select>
         <p>Event Name</p>
         <input
