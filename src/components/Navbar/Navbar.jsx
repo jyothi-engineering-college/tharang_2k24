@@ -86,8 +86,11 @@ function Navbar() {
           <Link className="rutl" to="/events" onClick={() => setMenuOpen(false)}>
             Events
           </Link>
-          <Link className="rutl" to="/sponsor" onClick={() => setMenuOpen(false)}>
+          {/* <Link className="rutl" to="/sponsor" onClick={() => setMenuOpen(false)}>
             Sponsor
+          </Link> */}
+          <Link className="rutl" to="https://tharang2024news.wordpress.com/" onClick={() => setMenuOpen(false)}>
+            News
           </Link>
           <Link className="rutl" to="/team" onClick={() => setMenuOpen(false)}>
             Team
