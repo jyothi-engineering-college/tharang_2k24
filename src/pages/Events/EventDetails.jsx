@@ -61,7 +61,9 @@ const EventDetails = () => {
       <div className="tideim">
         <div className="evndep">
           <h3>{eventData.event_name}</h3>
+          {eventData.department === "Common" ? (<p>Common Events</p>) : (
           <p>Dept of {eventData.department}</p>
+        )}
         </div>
         <img src={eventData.poster_url} alt="poster" />
       </div>

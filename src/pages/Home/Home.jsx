@@ -6,6 +6,7 @@ import "./home.css";
 import DateStrip from "../../components/DateStrip/DateStrip";
 import Bento from "../../components/Bento/Bento";
 import Footer from "../../components/Footer/Footer";
+import FeaturedEvents from "../../components/FeaturedEvents/FeaturedEvents";
 
 function Home() {
 
@@ -16,7 +17,7 @@ function Home() {
         <Navbar />
         <Header />
         <DateStrip />
-
+        <FeaturedEvents />
         <About />
         <Bento />
         <Footer />

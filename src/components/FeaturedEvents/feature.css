@@ -1,0 +1,31 @@
+.abh
+{
+    display: inline-flex;
+    gap: 20px;
+    align-items: center;
+    padding-left: 31px;
+    margin-top: 144px;
+}
+.wner
+{
+    width: 2px;
+height: 60px;
+background: #EFFFFB;
+}
+.abh h3
+{
+    color: var(--WHITISH, #EFFFFB);
+font-family: "Gemunu Libre";
+font-size: 64px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+margin: 2px;
+}
+.featurepadam
+{
+    object-fit: cover;
+    width: 90%;
+height: auto;
+margin: 20px;
+}

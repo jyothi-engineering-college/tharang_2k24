@@ -44,6 +44,9 @@ const EventsNav = ({ sendDept }) => {
         <div onClick={() => handleClick("RA")} className="navTab">
           <p className="navTabcontent">RA</p>
         </div>
+        <div onClick={() => handleClick("Common")} className="navTab">
+          <p className="navTabcontent">Common</p>
+        </div>
       </div>
     </>
   );
