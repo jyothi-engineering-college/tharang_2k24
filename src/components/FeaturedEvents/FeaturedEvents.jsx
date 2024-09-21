@@ -26,7 +26,7 @@ function FeaturedEvents() {
         modules={[Navigation, Pagination, Mousewheel, Keyboard]}
         className="mySwiper"
       >
-        <SwiperSlide className='swipsli'><img className='featurepadam' src={Srishti} alt="Srishti"/></SwiperSlide>
+        <SwiperSlide><img className='featurepadam' src={Srishti} alt="Srishti"/></SwiperSlide>
         <SwiperSlide><img className='featurepadam' src={Nrithya} alt="Srishti"/></SwiperSlide>
         <SwiperSlide><img className='featurepadam' src={ProShow} alt="Srishti"/></SwiperSlide>
         {/* <SwiperSlide><img className='featurepadam' src={Srishti} alt="Srishti"/></SwiperSlide>
