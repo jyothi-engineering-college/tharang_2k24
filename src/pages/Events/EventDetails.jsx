@@ -106,13 +106,17 @@ const EventDetails = () => {
 </a> */}
 
       </div>
-      {/* <a
-        href={eventData.registerlink}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Register Here
-      </a> */}
+      {eventData.id === 110 ? (<div className="registevent1">
+      <a
+  className="vellakkaran"
+  href={eventData.knowlink}
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  Know More !
+</a>
+</div>):(<h1></h1>)}
+      
       <Footer/>
     </div>
   );
