@@ -81,24 +81,42 @@ const EventDetails = () => {
   Share Event Link
 </button>
 
-
-<a
+{eventData.id ===107 ? (<a
+  className="vellakkaran"
+  href={eventData.registerlink}
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  Book Your Tickets !
+</a>)  : (<a
   className="vellakkaran"
   href={eventData.registerlink}
   target="_blank"
   rel="noopener noreferrer"
 >
   Register Now!
-</a>
+</a>)}
+{/* <a
+  className="vellakkaran"
+  href={eventData.registerlink}
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  Register Now!
+</a> */}
 
       </div>
-      {/* <a
-        href={eventData.registerlink}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Register Here
-      </a> */}
+      {eventData.id === 110 ? (<div className="registevent1">
+      <a
+  className="vellakkaran"
+  href={eventData.knowlink}
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  Know More !
+</a>
+</div>):(<h1></h1>)}
+      
       <Footer/>
     </div>
   );
