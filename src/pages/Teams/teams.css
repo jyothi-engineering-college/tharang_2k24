@@ -10,7 +10,7 @@
     padding-top: 200px;
 }
 
-.teamhd h3 {
+.committees h3 {
     color: var(--WHITISH, #EFFFFB);
     text-align: center;
     font-family: "Gemunu Libre";
@@ -57,7 +57,7 @@
 .devi.anand { background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)), url("../../img/aanand.jpg"); }
 .devi.aasad { background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)), url("../../img/aasad.jpg"); }
 .devi.amarnath { background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)), url("../../img/amarnath.jpg"); }
-.devi.mohammed { background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)), url("../../img/irfan.jpg"); }
+.devi.irfan { background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)), url("../../img/irfan.jpg"); }
 .devi.naveen { background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)), url("../../img/naveen.jpg"); }
 
 .devi:hover {
@@ -114,10 +114,11 @@
 }
 
 @media only screen and (max-width:768px) {
+    .teamsall{ width: 100%;}
     .teamhd p { font-size: 48px; }
     .teamhd h3 { font-size: 58px; }
     .devpad { grid-template-columns: auto; }
     .devi { width: 310px; height: 398px; }
-    .devit h3 { font-size: 32px; }
+    .committees h3 { font-size: 32px; }
     .devit p { font-size: 20px; }
 }
