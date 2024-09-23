@@ -60,6 +60,9 @@ function Navbar() {
           <Link className="rutl" to="/team">
             Team
           </Link>
+          <Link className="rutl" to="/committee">
+            Committee
+          </Link>
         </div>
         <div className={`hlog ${menuOpen ? 'hidden' : ''}`}>
           <Link className="rutl" to="/login">
