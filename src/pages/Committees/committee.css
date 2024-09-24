@@ -43,13 +43,16 @@
     background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
     margin-bottom: 30px;
 }
+.devi.gokul { background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)), url("../../img/gokul.jpg"); }
+.devi.ajay { background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)), url("../../img/ajay.jpg"); }
+.devi.vismaya { background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)), url("../../img/vismaya.jpg"); }
+.devi.mekha { background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)), url("../../img/mekha.jpg"); }
+.devi.anand { background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)), url("../../img/aanand.jpg"); }
+.devi.aasad { background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)), url("../../img/aasad.jpg"); }
+.devi.amarnath { background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)), url("../../img/amarnath.jpg"); }
+.devi.irfan { background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)), url("../../img/irfan.jpg"); }
+.devi.naveen { background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)), url("../../img/naveen.jpg"); }
 
-.devi.alan { background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)), url("../../img/alanjs.png"); }
-.devi.adarsh { background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)), url("../../img/adarsham.png"); }
-.devi.abhiram { background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)), url("../../img/vakkil.png"); }
-.devi.abid { background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)), url("../../img/thotta.png"); }
-.devi.arun { background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)), url("../../img/arunj.png"); }
-.devi.christopher { background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)), url("../../img/christu.png"); }
 .devi:hover {
     filter: grayscale(0%);
     transform: scale(1.2);
