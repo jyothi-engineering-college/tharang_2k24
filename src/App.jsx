@@ -11,6 +11,7 @@ import Form from "./pages/Admin/Form";
 import EventDetails from "./pages/Events/EventDetails";
 import './App.css';
 import LiveEvents from "./pages/LiveEvents/LiveEvents";
+import Admin from "./pages/Admin/Admin";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/form" element={<Form />} />
         <Route path="/live" element={<LiveEvents/>} />
+        <Route path="/admin" element={<Admin />} />
       </Routes>
     </Router>
   );

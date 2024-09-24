@@ -13,6 +13,7 @@
     "@coreui/coreui": "^5.1.2",
     "@coreui/react": "^5.3.0",
     "@picocss/pico": "^2.0.6",
+    "@supabase/auth-helpers-react": "^0.5.0",
     "@supabase/supabase-js": "^2.45.3",
     "animate.css": "^4.1.1",
     "bulma": "^1.0.2",
@@ -23,7 +24,7 @@
     "react-responsive-carousel": "^3.2.23",
     "react-router-dom": "^6.26.2",
     "react-spinners": "^0.14.1",
-    "supabase": "^1.192.5",
+    "supabase": "^1.200.3",
     "swiper": "^11.1.14",
     "tailwindcss": "^3.4.10",
     "three": "^0.167.1"
