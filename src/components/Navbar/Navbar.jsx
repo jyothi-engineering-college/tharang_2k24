@@ -98,6 +98,9 @@ function Navbar() {
           <Link className="rutl" to="/team" onClick={() => setMenuOpen(false)}>
             Team
           </Link>
+          <Link className="rutl" to="/committee">
+            Committee
+          </Link>
           <Link className="rutl login-link" to="/login" onClick={() => setMenuOpen(false)}>
             <div className="hlogphone">
               <img src={UserLog} alt="userlogin" />
