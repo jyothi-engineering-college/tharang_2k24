@@ -118,8 +118,15 @@ function Committee() {
 
     <h3>Cultural Committee</h3>
     <div className="devpad">
-      
+      <div className="devi joseph">
+        <div className="sidevara"></div>
+        <div className="devit">
+        <h3>Joseph Martin</h3>
+          <p>Cultural Committee Coordinator</p>
+        </div>
+      </div>
     </div>
+      
   </div>
   <Footer />
 </div>

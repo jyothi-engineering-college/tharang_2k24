@@ -52,6 +52,7 @@
 .devi.amarnath { background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)), url("../../img/amarnath.jpg"); }
 .devi.irfan { background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)), url("../../img/irfan.jpg"); }
 .devi.naveen { background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)), url("../../img/naveen.jpg"); }
+.devi.joseph { background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)), url("../../img/joseph.jpg"); }
 
 .devi:hover {
     filter: grayscale(0%);

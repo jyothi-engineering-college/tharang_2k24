@@ -62,6 +62,14 @@ function Teams() {
           <p>Backend Dev</p>
         </div>
       </div>
+
+      <div className="devi unni">
+        <div className="sidevara"></div>
+        <div className="devit">
+          <h3>Unnikrishnan A R</h3>
+          <p>News reporter</p>
+        </div>
+      </div>
     </div>
   </div>
   <Footer />

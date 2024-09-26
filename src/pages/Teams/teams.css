@@ -50,6 +50,7 @@
 .devi.abid { background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)), url("../../img/thotta.png"); }
 .devi.arun { background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)), url("../../img/arunj.png"); }
 .devi.christopher { background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)), url("../../img/christu.png"); }
+.devi.unni { background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)), url("../../img/unni.jpg"); }
 .devi:hover {
     filter: grayscale(0%);
     transform: scale(1.2);
