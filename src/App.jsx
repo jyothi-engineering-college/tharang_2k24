@@ -10,6 +10,7 @@ import Login from "./pages/Admin/Login";
 import Form from "./pages/Admin/Form";
 import EventDetails from "./pages/Events/EventDetails";
 import './App.css';
+import LiveEvents from "./pages/LiveEvents/LiveEvents";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path="/sponsor" element={<Sponsor />} />
         <Route path="/login" element={<Login />} />
         <Route path="/form" element={<Form />} />
+        <Route path="/live" element={<LiveEvents/>} />
       </Routes>
     </Router>
   );
