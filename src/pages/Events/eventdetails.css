@@ -45,18 +45,21 @@ height: 363px;
 border-radius: 20px;
 /* background: url(<path-to-image>) lightgray 50% / cover no-repeat; */
 }
-.evdetdesc
-{
+.evdetdesc {
     color: var(--WHITISH, #EFFFFB);
-font-family: "Gemunu Libre";
-font-size: 32px;
-font-style: normal;
-font-weight: 300;
-line-height: normal;
-padding-left: 45px;
-padding-right: 45px;
-margin-bottom: 56px;
-    white-space: pre;
+    font-family: "Gemunu Libre";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    padding-left: 45px;
+    padding-right: 45px;
+    margin-bottom: 56px;
+    white-space: pre-wrap;
+}
+
+.eventdescwrap {
+    overflow-wrap: break-word;
 }
 .eventmain
 {
