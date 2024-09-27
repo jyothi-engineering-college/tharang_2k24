@@ -5,6 +5,7 @@ import Tharangam from "../../img/headerlog.jpg";
 import GoButt from "../../img/gobutt.png";
 import liveGif from "../../img/livegif.gif";
 import './liveevents.css';
+import Navbar from "../../components/Navbar/Navbar";
 
 function LiveEvents() {
     const [liveEvents, setLiveEvents] = useState([]);
@@ -53,7 +54,8 @@ function LiveEvents() {
 
     return (
         <div className="liveey">
-            <h1>Live Events</h1>
+            <Navbar/>
+            <h1 className="lehe">Live Events</h1>
             {liveEvents.map((levent, index) => (
                 <div className="lecard" key={index}>
                     <div className="lechead">
@@ -65,17 +67,25 @@ function LiveEvents() {
                         <img onClick={() => handleClick(levent)} src={GoButt} alt="Go button" />
                     </div>
                     <div className="lelive">
+                        <div className="lelive2">
                         <div className="lelivegif">
                             <img src={liveGif} alt="live" />
                             <p>Live Now</p>
                         </div>
-                        <div className="lebusy">
+                        {levent.busy === 'free' ? (<div className="lebusy" style={{background: "#DCEEEA"}}>
                             {liveEventsCircle(levent.busy)}
-                            {levent.busy === 'free' ? (<p>Free than Usual</p>) : levent.busy === 'normal' ? (<p>Normal</p>) : (<p>Heavy Rush</p>)}
+                            <p>Free than Usual</p>
+                        </div>) : levent.busy === 'normal' ? (<div className="lebusy" style={{background: "#C7C7C7"}}>
+                            {liveEventsCircle(levent.busy)}
+                            <p>Normal</p>
+                        </div>) : (<div className="lebusy" style={{background: "#EEDDDC"}}>
+                            {liveEventsCircle(levent.busy)}
+                            <p>Heavy Rush</p>
+                        </div>)}
                         </div>
                         <img className="urlposter" src={levent.poster_url} alt="poster" />
-                        <h3>{levent.event_name}</h3>
-                        <p>{levent.location}</p>
+                        <h3 className="levname">{levent.event_name}</h3>
+                        <p className="levloc">{levent.location}</p>
                     </div>
                 </div>
             ))}

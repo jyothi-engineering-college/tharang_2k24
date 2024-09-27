@@ -196,9 +196,9 @@ const Form = () => {
         <img src={Jyolog} alt="jyohi" />
       </div>
       <p className="submithead">Tharang Admin Page</p>
-      <p>Welcome {userEmail}</p>
+      <p className="kaalan">Welcome {userEmail}</p>
       {/* <p>{userId}</p> */}
-      <Link to="/admin" state={{userId}}>View Events</Link>
+      <Link className="evepo" to="/admin" state={{userId}}>Control Events</Link>
       <div className="submitform">
         <p>Department</p>
         <select

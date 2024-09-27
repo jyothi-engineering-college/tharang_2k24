@@ -3,3 +3,116 @@
     width: 200px;
     height: 200px;
 }
+@media only screen and (max-width:768px)
+{
+    .vepadam
+    {
+        width: 84px;
+        height: 84px;
+        border-radius: 5px;
+        box-shadow: 0px 4px 5.5px -1px #1E1E1E;
+    }
+    .controlme
+    {
+        border-radius: 10px;
+border: 1px solid var(--WHITISH, #EFFFFB);
+width: 90%;
+margin-left: auto;
+margin-right: auto;
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding-top: 20px;
+padding-bottom: 20px;
+padding-left: 10px;
+padding-right: 10px;
+margin-bottom: 20px;
+    }
+    .controldet h1
+    {
+        color: #FFF;
+font-family: "Gemunu Libre";
+font-size: 32px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+margin: 0;;
+    }
+    .controlme p
+    {
+        color: #FFF;
+font-family: "Gemunu Libre";
+font-size: 14px;
+font-style: normal;
+font-weight: 300;
+line-height: normal;
+margin: 0;
+padding-top: 10px;
+padding-bottom: 5px;
+    }
+    .controllive
+    {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    .controllive button
+    {
+        display: inline-flex;
+padding: 5px;
+justify-content: center;
+align-items: center;
+gap: 10px;
+border-radius: 5px;
+color: #FFF;
+text-align: center;
+font-family: "Gemunu Libre";
+font-size: 14px;
+font-style: normal;
+font-weight: 300;
+line-height: normal;
+border:none;
+
+    }
+    .controlme input
+    {
+        color: #FFF;
+        font-family: "Gemunu Libre";
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+    }
+    .inplace
+    {
+        color: #FFF;
+font-family: "Gemunu Libre";
+font-size: 14px;
+font-style: normal;
+font-weight: 300;
+line-height: normal;
+margin: 0;
+    }
+    .evepo1
+    {
+        display: block;
+padding: 13px 15px;
+justify-content: center;
+align-items: center;
+gap: 10px;
+border: none;
+border-radius: 10px;
+background: #EFFFFB;
+color: #272727;
+text-align: center;
+font-family: "Gemunu Libre";
+font-size: 14px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+width: 20px;
+/* width: 95%; */
+margin-top: 10px;
+text-decoration: none;
+    }
+}

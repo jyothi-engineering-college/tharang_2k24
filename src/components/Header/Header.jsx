@@ -3,10 +3,12 @@ import './header.css';
 import ThreeDModel from '../Collada/ThreeDModel';
 import 'animate.css';
 import Countdown from '../Countdown/Countdown';
+import Aadi from '../../img/adi.png';
 
 function Header() {
   return (
     <div className='headu'>
+        {/* <img src={Aadi} alt="aadi" className='aadi' /> */}
         <div className="hall">
         <div className="hdet animate__animated animate__backInUp">
         <p>Let's Get</p>

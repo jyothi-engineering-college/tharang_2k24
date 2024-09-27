@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation,Link } from 'react-router-dom';
 import { supabase } from "../../Supabaseconffig";
 import './admin.css';
+import Jyolog from "../../img/jyosmall.png";
+import Tharangam from "../../img/tharangsmall.png";
 
 const Admin = () => {
   const location = useLocation();
@@ -72,19 +74,35 @@ const Admin = () => {
 
   return (
     <div>
+      <div className="loghd">
+        <img src={Tharangam} alt="tharang" />
+        <img src={Jyolog} alt="jyohi" />
+      </div>
+      <p className="submithead">Control Events</p>
+      
+      <Link to = "/form" className='evepo' >Go Back</Link>
       {eventData.map((event) => (
-        <div key={event.id}>
+        <div className='controlme' key={event.id}>
+          <div className="controldet">
           <h1>{event.event_name}</h1>
-          <p>Live status</p>
-          <button onClick={() => handleLive(event.id)}>
-            {liveState[event.id] ? 'Live Now' : 'Go Live'} {/* Update the button label based on liveState */}
-          </button>
-
+          <p>Dept of {event.department}</p>
+          <p>Event ID : {event.id}</p>
           <p>{event.location} | {event.date} | {event.time}</p>
-          <input type='radio' name='busy' onChange={(e) => handleBusy(e.target.value, event.id)} value='free' /> Free than usual
-          <input type='radio' name='busy' onChange={(e) => handleBusy(e.target.value, event.id)} value='normal' /> Normal
-          <input type='radio' name='busy' onChange={(e) => handleBusy(e.target.value, event.id)} value='rush' /> Heavy rush
+          <div className="controllive">
+          <p>Live status : </p>
+          
+            {liveState[event.id] ? (<button style={{background: "#FF1E00"}} onClick={() => handleLive(event.id)}>Live Now</button>) : (<button  style={{background: "#50D890"}} onClick={() => handleLive(event.id)}>Go Live</button>)} {/* Update the button label based on liveState */}
+
+          </div>
+
+          <p>Busy Status : </p>
+          <input type='radio' name='busy' onChange={(e) => handleBusy(e.target.value, event.id)} value='free' /> <label className='inplace'> Free than usual</label>
+          <input type='radio' name='busy' onChange={(e) => handleBusy(e.target.value, event.id)} value='normal' /> <label className='inplace'> Normal</label>
+          <input type='radio' name='busy' onChange={(e) => handleBusy(e.target.value, event.id)} value='rush' /> <label className='inplace'> Heavy Rush</label>
+          <Link className='evepo1' to="https://docs.google.com/forms/d/e/1FAIpQLSfrbBrq7ppjw5rHO7Hy1cm_MxdkcQquxdDv8W4LNHpKAzm3JA/viewform?usp=sf_link" >Edit</Link>
+          </div>
           <img className='vepadam' src={event.poster_url} alt="Event" />
+          
         </div>
       ))}
     </div>
