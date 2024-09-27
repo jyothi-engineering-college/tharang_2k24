@@ -61,42 +61,57 @@ const EventDetails = () => {
       <div className="tideim">
         <div className="evndep">
           <h3>{eventData.event_name}</h3>
-          {eventData.department === "Common" ? (<p>Common Events</p>) : (
-          <p>Dept of {eventData.department}</p>
-        )}
+          {eventData.department === "Common" ? (
+            <p>Common Events</p>
+          ) : (
+            <p>Dept of {eventData.department}</p>
+          )}
         </div>
         <img src={eventData.poster_url} alt="poster" />
       </div>
-      <p className="evdetdesc">
-        {eventData.description}
-      </p>
+      <div className="eventdescwrap">
+        <p className="evdetdesc">{eventData.description}</p>
+      </div>
+
       <div className="eventmain">
-        <p><img src={locSvg}/> {eventData.location}</p>
-        <p><img src={timeSvg}/> {eventData.time}</p>
-        <p><img src={dateSvg}/> {eventData.date}</p>
-        <p><img src={phoneSvg}/> {eventData.contact}</p>
+        <p>
+          <img src={locSvg} /> {eventData.location}
+        </p>
+        <p>
+          <img src={timeSvg} /> {eventData.time}
+        </p>
+        <p>
+          <img src={dateSvg} /> {eventData.date}
+        </p>
+        <p>
+          <img src={phoneSvg} /> {eventData.contact}
+        </p>
       </div>
       <div className="registevent">
-      <button className="vellayalla" onClick={shareEventLink}>
-  Share Event Link
-</button>
+        <button className="vellayalla" onClick={shareEventLink}>
+          Share Event Link
+        </button>
 
-{eventData.id ===107 ? (<a
-  className="vellakkaran"
-  href={eventData.registerlink}
-  target="_blank"
-  rel="noopener noreferrer"
->
-  Book Your Tickets !
-</a>)  : (<a
-  className="vellakkaran"
-  href={eventData.registerlink}
-  target="_blank"
-  rel="noopener noreferrer"
->
-  Register Now!
-</a>)}
-{/* <a
+        {eventData.id === 107 ? (
+          <a
+            className="vellakkaran"
+            href={eventData.registerlink}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Book Your Tickets !
+          </a>
+        ) : (
+          <a
+            className="vellakkaran"
+            href={eventData.registerlink}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Register Now!
+          </a>
+        )}
+        {/* <a
   className="vellakkaran"
   href={eventData.registerlink}
   target="_blank"
@@ -104,20 +119,23 @@ const EventDetails = () => {
 >
   Register Now!
 </a> */}
-
       </div>
-      {eventData.id === 110 ? (<div className="registevent1">
-      <a
-  className="vellakkaran"
-  href={eventData.knowlink}
-  target="_blank"
-  rel="noopener noreferrer"
->
-  Know More !
-</a>
-</div>):(<h1></h1>)}
-      
-      <Footer/>
+      {eventData.id === 110 ? (
+        <div className="registevent1">
+          <a
+            className="vellakkaran"
+            href={eventData.knowlink}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Know More !
+          </a>
+        </div>
+      ) : (
+        <h1></h1>
+      )}
+
+      <Footer />
     </div>
   );
 };
