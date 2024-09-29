@@ -3,7 +3,7 @@ import './header.css';
 import ThreeDModel from '../Collada/ThreeDModel';
 import 'animate.css';
 import Countdown from '../Countdown/Countdown';
-import Aadi from '../../img/adi.png';
+import Aadi from '../../img/tarangweb.png';
 
 function Header() {
   return (

@@ -12,6 +12,7 @@ import EventDetails from "./pages/Events/EventDetails";
 import './App.css';
 import LiveEvents from "./pages/LiveEvents/LiveEvents";
 import Admin from "./pages/Admin/Admin";
+import Lucky from "./pages/Lucky/Lucky";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
         <Route path="/form" element={<Form />} />
         <Route path="/live" element={<LiveEvents/>} />
         <Route path="/admin" element={<Admin />} />
+        <Route path="/lucky" element={<Lucky />} />
       </Routes>
     </Router>
   );
