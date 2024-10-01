@@ -1,23 +1,60 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Navbar from '../../components/Navbar/Navbar';
 import { supabase } from '../../Supabaseconffig'; // Import Supabase client
 import './lucky.css';
-import '../Admin/form.css'
+import '../Admin/form.css';
 
 const Lucky = () => {
   const [personname, setPersonName] = useState('');
   const [personphone, setPersonPhone] = useState('');
   const [personcollege, setPersonCollege] = useState('');
+  const [userIP, setUserIP] = useState('');
+
+  // Fetch user's IP address
+  const fetchUserIP = async () => {
+    try {
+      const res = await fetch('https://api.ipify.org?format=json');
+      const data = await res.json();
+      setUserIP(data.ip);
+    } catch (error) {
+      console.error('Error fetching IP address:', error);
+    }
+  };
+
+  useEffect(() => {
+    fetchUserIP();
+  }, []);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
-      // Insert the form data into the `lucky_people` table in Supabase
+      // Check if the user with this IP has already submitted
+      const { data: existingEntry, error: fetchError } = await supabase
+        .from('lucky_people')
+        .select('*')
+        .eq('ip_address', userIP);
+
+      if (fetchError) {
+        console.error('Error checking existing submissions:', fetchError);
+        return;
+      }
+
+      if (existingEntry.length > 0) {
+        alert('You have already submitted an entry from this IP address.');
+        return;
+      }
+
+      // Insert the form data along with the IP address into the `lucky_people` table in Supabase
       const { data, error } = await supabase
         .from('lucky_people')
         .insert([
-          { personname: personname, personphone: personphone, personcollege: personcollege },
+          {
+            personname: personname,
+            personphone: personphone,
+            personcollege: personcollege,
+            ip_address: userIP, // Store the user's IP address
+          },
         ]);
 
       if (error) {
@@ -32,21 +69,16 @@ const Lucky = () => {
   };
 
   return (
-    <div className='luckyl'>
+    <div className="luckyl">
       <Navbar />
       <div className="luckyh">
         <h3>The Lucky Vault</h3>
         <p>"We are excited to announce a special Lucky Draw competition as part of the Tharang Tech Fest website! Participate for a chance to win from a prize pool of ₹1,000. Don’t miss out on this exciting opportunity—enter now and try your luck!"</p>
         <div className="ppool1">
-        <h3 className='ppool'>
-          1st Prize : Rs.500 Amazon Voucher
-        </h3>
-        <h3 className='ppool'>
-          2nd Prize : Rs.300 Flipkart Voucher
-        </h3>
-        <h3 className="ppool">
-          3rd Prize : Rs.100 Mobile Recharge
-        </h3></div>
+          <h3 className="ppool">1st Prize : Rs.500 Amazon Voucher</h3>
+          <h3 className="ppool">2nd Prize : Rs.300 Flipkart Voucher</h3>
+          <h3 className="ppool">3rd Prize : Rs.100 Mobile Recharge</h3>
+        </div>
         <form className="submitform" onSubmit={handleSubmit}>
           <p>Name</p>
           <input
@@ -75,7 +107,9 @@ const Lucky = () => {
             onChange={(e) => setPersonCollege(e.target.value)}
             required
           />
-          <button type="submit" className="submitbutton">Submit</button>
+          <button type="submit" className="submitbutton">
+            Submit
+          </button>
         </form>
       </div>
     </div>
