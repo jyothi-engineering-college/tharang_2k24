@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Navbar from '../../components/Navbar/Navbar';
 import { supabase } from '../../Supabaseconffig'; // Import Supabase client
 import './lucky.css';
@@ -8,32 +8,16 @@ const Lucky = () => {
   const [personname, setPersonName] = useState('');
   const [personphone, setPersonPhone] = useState('');
   const [personcollege, setPersonCollege] = useState('');
-  const [userIP, setUserIP] = useState('');
-
-  // Fetch user's IP address
-  const fetchUserIP = async () => {
-    try {
-      const res = await fetch('https://api.ipify.org?format=json');
-      const data = await res.json();
-      setUserIP(data.ip);
-    } catch (error) {
-      console.error('Error fetching IP address:', error);
-    }
-  };
-
-  useEffect(() => {
-    fetchUserIP();
-  }, []);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
-      // Check if the user with this IP has already submitted
+      // Check if the user with this phone number has already submitted
       const { data: existingEntry, error: fetchError } = await supabase
         .from('lucky_people')
         .select('*')
-        .eq('ip_address', userIP);
+        .eq('personphone', personphone); // Restrict by phone number
 
       if (fetchError) {
         console.error('Error checking existing submissions:', fetchError);
@@ -41,11 +25,11 @@ const Lucky = () => {
       }
 
       if (existingEntry.length > 0) {
-        alert('You have already submitted an entry from this IP address.');
+        alert('User has already registered for the lucky draw!');
         return;
       }
 
-      // Insert the form data along with the IP address into the `lucky_people` table in Supabase
+      // Insert the form data into the `lucky_people` table in Supabase
       const { data, error } = await supabase
         .from('lucky_people')
         .insert([
@@ -53,7 +37,6 @@ const Lucky = () => {
             personname: personname,
             personphone: personphone,
             personcollege: personcollege,
-            ip_address: userIP, // Store the user's IP address
           },
         ]);
 
@@ -77,7 +60,7 @@ const Lucky = () => {
         <div className="ppool1">
           <h3 className="ppool">1st Prize : Rs.500 Amazon Voucher</h3>
           <h3 className="ppool">2nd Prize : Rs.300 Flipkart Voucher</h3>
-          <h3 className="ppool">3rd Prize : Rs.100 Mobile Recharge</h3>
+          <h3 className="ppool">3rd Prize : Rs.200 Mobile Recharge</h3>
         </div>
         <form className="submitform" onSubmit={handleSubmit}>
           <p>Name</p>
