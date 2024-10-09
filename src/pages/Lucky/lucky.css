@@ -1,0 +1,53 @@
+@media only screen and (max-width:768px)
+{
+    .luckyh
+    {
+        background-image: url('../../img/spbg.png');
+    width: 100%;
+    height:auto;
+    background-size: cover;
+    background-repeat: no-repeat;
+    }
+    .luckyl h3
+    
+{
+    color: var(--WHITISH, #EFFFFB);
+text-align: center;
+font-family: "Gemunu Libre";
+font-size: 52px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+padding-top: 135px;
+margin: 0;
+}
+.luckyl p
+{
+    color: #FFF;
+font-family: "Gemunu Libre";
+font-size: 16px;
+font-style: normal;
+font-weight: 300;
+line-height: normal;
+margin: 0;
+text-align: center;
+margin-top: 16px;
+padding-left: 50px;
+padding-right: 50px;
+}
+.ppool1 h3
+{
+    color: var(--WHITISH, #EFFFFB) !important;
+text-align: center !important;
+font-family: "Gemunu Libre" !important;
+font-size: 32px !important;
+font-style: normal !important;
+font-weight: 600 !important;
+line-height: normal !important;
+padding-left: 112px !important;
+padding-right: 112px !important;
+margin: 0 !important;
+padding-top: 0;
+margin-top: 30px !important;
+}
+}

@@ -43,10 +43,10 @@ function Navbar() {
           </Link>
           <Link
             className="rutl"
-            to="/"
+            to="/live"
             onClick={() => handleScrollToSection("abtt")}
           >
-            About
+            Live
           </Link>
           <Link className="rutl" to="/events">
             Events
@@ -83,8 +83,8 @@ function Navbar() {
           <Link className="rutl" to="/" onClick={() => setMenuOpen(false)}>
             Home
           </Link>
-          <Link className="rutl" to="/" onClick={() => { handleScrollToSection("abtt"); setMenuOpen(false); }}>
-            About
+          <Link className="rutl" to="/live" onClick={() => { handleScrollToSection("abtt"); setMenuOpen(false); }}>
+            Live
           </Link>
           <Link className="rutl" to="/events" onClick={() => setMenuOpen(false)}>
             Events

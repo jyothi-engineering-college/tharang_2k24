@@ -103,4 +103,37 @@ margin-right: auto;
 margin: 20px;
 margin-bottom: 80px;
 }
+.evepo
+{
+    display: inline-flex;
+padding: 13px 15px;
+justify-content: center;
+align-items: center;
+gap: 10px;
+border: none;
+border-radius: 10px;
+background: #EFFFFB;
+color: #272727;
+text-align: center;
+font-family: "Gemunu Libre";
+font-size: 20px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+/* width: 95%; */
+margin: 20px;
+/* margin-bottom: 80px; */
+text-decoration: none;
+}
+.kaalan
+{
+    color: #FFF;
+text-align: center;
+padding-right: 20px;
+font-family: "Gemunu Libre";
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
   }

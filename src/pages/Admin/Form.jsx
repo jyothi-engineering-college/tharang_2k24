@@ -6,6 +6,8 @@ import './form.css';
 import Jyolog from "../../img/jyosmall.png";
 import Tharangam from "../../img/tharangsmall.png";
 import { supabase } from "../../Supabaseconffig";
+import { useSupabaseClient } from '@supabase/auth-helpers-react';
+import { Link } from "react-router-dom";
 
 // Your Firebase configuration
 const firebaseConfig = {
@@ -37,6 +39,8 @@ const Form = () => {
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
   const [uploading, setUploading] = useState(false);
+  const [userEmail , setUserEmail] = useState(null);
+  const [userId, setUserId] = useState(null);
 
   const navigate = useNavigate();
 
@@ -47,6 +51,36 @@ const Form = () => {
       navigate("/login");
     }
   }, [navigate]);
+  useEffect(() => {
+    // Fetch the user session
+    const fetchUser = async () => {
+      const {
+        data: { session },
+        error,
+      } = await supabase.auth.getSession();
+
+      if (error) {
+        console.error("Error fetching user session:", error);
+      } else if (session) {
+        setUserEmail(session.user.email);
+        setUserId(session.user.id); // Set the logged-in user's email
+      }
+    };
+
+    fetchUser();
+  }, []);
+  useEffect(() => {
+    // fetch user Events
+    const fetchUserEvents = async () => {
+      const { data, error } = await supabase.from("events").select("*").eq("uid", userId);
+      if (error) {
+        console.error(error);
+      } else {
+        console.log(data);
+      }
+    };
+    fetchUserEvents();
+  }, [userId]);
 
   // Handle file input change
   const handleFileChange = async (e) => {
@@ -161,7 +195,10 @@ const Form = () => {
         <img src={Tharangam} alt="tharang" />
         <img src={Jyolog} alt="jyohi" />
       </div>
-      <p className="submithead">Event Submission Form</p>
+      <p className="submithead">Tharang Admin Page</p>
+      <p className="kaalan">Welcome {userEmail}</p>
+      {/* <p>{userId}</p> */}
+      <Link className="evepo" to="/admin" state={{userId}}>Control Events</Link>
       <div className="submitform">
         <p>Department</p>
         <select
